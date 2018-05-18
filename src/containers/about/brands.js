@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Brand = props => {
-  console.log(props);
+  // console.log(props);
   let brands = props.brands.map((brand, i) => {
     return (
       <li
@@ -9,7 +9,7 @@ const Brand = props => {
           props.setBrand(brand);
         }}
         key={i}>
-        ID: {brand.fields._id} <br />
+        {/*ID: {brand.fields._id} <br />*/}
         Restaurant: {brand.fields.name}
       </li>
     );
@@ -18,6 +18,7 @@ const Brand = props => {
   return (
     <div>
       <h1>Food Page: {props.brand.fields.name}</h1>
+      <h3>Select restaurant from list below</h3>
       <ul>{brands}</ul>
     </div>
   );

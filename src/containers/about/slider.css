@@ -1,0 +1,9 @@
+#slider-wrap {
+  padding: 10px;
+  margin: 10px;
+}
+
+.input-range__label--max .input-range__label-container,
+.input-range__label-container {
+  left: 0;
+}

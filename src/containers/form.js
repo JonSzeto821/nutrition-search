@@ -91,10 +91,10 @@ const SimpleForm = props => {
       </div>*/}
       <div>
         <button type="submit" disabled={pristine || submitting}>
-          Submit
+          Search Brand
         </button>
         <button type="button" disabled={pristine || submitting} onClick={reset}>
-          Clear Values
+          Clear
         </button>
       </div>
     </form>
