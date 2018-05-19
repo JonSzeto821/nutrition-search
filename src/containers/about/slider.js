@@ -73,8 +73,8 @@ const Slider = props => {
       id="slider"
       maxValue={1500}
       minValue={0}
-      // formatLabel={value => `${value} cals`}
-      value={props.values}
+      formatLabel={value => `${value} cal`}
+      value={props.values} //try {props.calories.fields} - doesnt work
       onChange={value => props.setVals(value)}
       onChangeComplete={value => props.setCals(value)}
     />

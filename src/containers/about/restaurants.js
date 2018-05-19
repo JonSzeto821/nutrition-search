@@ -19,7 +19,7 @@ const Restaurant = props => {
     <div>
       <h1>Food Page</h1>
       <h3>Select restaurant from list below</h3>
-      <p>Currently viewing: {props.brand.fields.name}</p>
+      <p>Currently viewing: {props.restaurant.fields.name}</p>
       <ul>{brands}</ul>
     </div>
   );

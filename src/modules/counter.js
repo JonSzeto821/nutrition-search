@@ -1,7 +1,7 @@
 const initialState = {
   foods: [],
   brands: [],
-  brand: { fields: { name: null, _id: null } },
+  restaurant: { fields: { name: null, _id: null } },
   calories: { fields: { cal_min: 200, cal_max: 800 } },
   values: { min: 450, max: 850 },
   macros: {
@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
     case 'SET_RESTAURANT':
       return {
         ...state,
-        brand: action.payload
+        restaurant: action.payload
       };
 
     case 'SET_CALS':
@@ -150,7 +150,7 @@ export const getFoodItems = () => (dispatch, getState) => {
   // return dispatch => {
   let url = new URL(`https://api.nutritionix.com/v1_1/search/`);
   let data = {
-    brand_id: state.counter.brand._id,
+    brand_id: state.counter.restaurant._id,
     results: '0:50',
     cal_min: state.counter.calories.fields.cal_min,
     cal_max: state.counter.calories.fields.cal_max,

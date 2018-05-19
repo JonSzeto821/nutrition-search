@@ -3,37 +3,38 @@ import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Restaurant from '../about/restaurants';
-import MenuItems from '../about/menuItems';
+import Slider from '../about/slider';
 import Form from '../form';
-// import MacroForm from '../macroForm';
+import MenuItems from '../about/menuItems';
 import {
   submit,
   setRestaurant,
   setCals,
-  getFoodItems,
-  setVals
+  setVals,
+  getFoodItems
 } from '../../modules/counter';
-import Slider from '../about/slider';
 
 const Home = props => (
   <div>
     <Restaurant
       setRestaurant={props.setRestaurant}
-      brand={props.brand}
+      restaurant={props.restaurant}
       brands={props.brands}
     />
     <Form onSubmit={props.submit} />
-    <h2>Select Calorie Range</h2>
     <div id="slider-wrap">
+      <h2>Select Calorie Range</h2>
       <Slider
         setCals={props.setCals}
+        calories={props.calories}
         setVals={props.setVals}
         values={props.values}
-        calories={props.calories}
       />
+      <br />
+      <br />
+      <button onClick={props.getFoodItems}>Get Menu Items</button>
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
-    <button onClick={props.getFoodItems}>Get Nutrition</button>
     <MenuItems />
   </div>
 );
@@ -41,7 +42,7 @@ const Home = props => (
 const mapStateToProps = state => ({
   foods: state.counter.foods,
   brands: state.counter.brands,
-  brand: state.counter.brand,
+  restaurant: state.counter.restaurant,
   values: state.counter.values,
   calories: state.counter.calories
 });
