@@ -2,12 +2,13 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Brand from '../about/brands';
+import Restaurant from '../about/restaurants';
+import MenuItems from '../about/menuItems';
 import Form from '../form';
-import MacroForm from '../macroForm';
+// import MacroForm from '../macroForm';
 import {
   submit,
-  setBrand,
+  setRestaurant,
   setCals,
   getFoodItems,
   setVals
@@ -16,8 +17,8 @@ import Slider from '../about/slider';
 
 const Home = props => (
   <div>
-    <Brand
-      setBrand={props.setBrand}
+    <Restaurant
+      setRestaurant={props.setRestaurant}
       brand={props.brand}
       brands={props.brands}
     />
@@ -28,37 +29,28 @@ const Home = props => (
         setCals={props.setCals}
         setVals={props.setVals}
         values={props.values}
+        calories={props.calories}
       />
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
     <button onClick={props.getFoodItems}>Get Nutrition</button>
-    {/*<h2>Macros</h2>
-    <h3>Protein</h3>
-    <Form />
-
-    <h3>Carbohydrates</h3>
-    <Form />
-
-    <h3>Fats</h3>
-    <Form />*/}
+    <MenuItems />
   </div>
 );
 
 const mapStateToProps = state => ({
-  count: state.counter.count,
-  name: state.counter.name,
-  strain: state.counter.strain,
   foods: state.counter.foods,
   brands: state.counter.brands,
   brand: state.counter.brand,
-  values: state.counter.values
+  values: state.counter.values,
+  calories: state.counter.calories
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       submit,
-      setBrand,
+      setRestaurant,
       setCals,
       getFoodItems,
       setVals,

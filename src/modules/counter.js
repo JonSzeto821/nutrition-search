@@ -1,7 +1,4 @@
 const initialState = {
-  count: 0,
-  name: 'Jon',
-  strain: '',
   foods: [],
   brands: [],
   brand: { fields: { name: null, _id: null } },
@@ -22,11 +19,10 @@ export default (state = initialState, action) => {
     case 'SUBMIT':
       return {
         ...state,
-        name: 'Szeto',
         brands: action.payload.hits
       };
 
-    case 'SET_BRAND':
+    case 'SET_RESTAURANT':
       return {
         ...state,
         brand: action.payload
@@ -43,6 +39,7 @@ export default (state = initialState, action) => {
       };
 
     case 'SET_VALS':
+      // console.log(action.payload); //{min: 450, max: 867}
       return {
         ...state,
         values: action.payload
@@ -66,7 +63,7 @@ export default (state = initialState, action) => {
 };
 // used to search for restaurants based on search
 export const submit = values => {
-  // console.log(values, this);
+  console.log(values, this);
   return dispatch => {
     let url = new URL('https://api.nutritionix.com/v1_1/brand/search');
     let data = {
@@ -97,11 +94,11 @@ export const submit = values => {
 };
 
 // used to select and choose which restaurant from list
-export const setBrand = value => {
+export const setRestaurant = value => {
   // console.log(value, this);
   return dispatch => {
     dispatch({
-      type: 'SET_BRAND',
+      type: 'SET_RESTAURANT',
       payload: value
     });
   };
