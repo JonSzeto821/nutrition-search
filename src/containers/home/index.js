@@ -31,7 +31,7 @@ const Home = props => (
       />
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
-    <button onClick={props.getFoodItems}>button!</button>
+    <button onClick={props.getFoodItems}>Get Nutrition</button>
     {/*<h2>Macros</h2>
     <h3>Protein</h3>
     <Form />
