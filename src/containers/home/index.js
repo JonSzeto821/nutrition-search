@@ -2,10 +2,10 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Restaurant from '../about/restaurants';
-import Slider from '../about/slider';
+import Restaurant from '../../components/restaurants/restaurants';
+import Slider from '../../components/slider/slider';
 import Form from '../form';
-import MenuItems from '../about/menuItems';
+import MenuItems from '../../components/menuItems/menuItems';
 import {
   submit,
   setRestaurant,
