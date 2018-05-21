@@ -2,7 +2,7 @@ import React from 'react';
 
 const Restaurant = props => {
   // console.log(props);
-  let brands = props.brands.map((restaurant, i) => {
+  let restaurants = props.brands.map((restaurant, i) => {
     return (
       <li
         onClick={() => {
@@ -20,7 +20,7 @@ const Restaurant = props => {
       <h1>Food Page</h1>
       <h3>Select restaurant from list below</h3>
       <p>Currently viewing: {props.restaurant.fields.name}</p>
-      <ul>{brands}</ul>
+      <ul>{restaurants}</ul>
     </div>
   );
 };

@@ -16,12 +16,12 @@ import {
 
 const Home = props => (
   <div>
+    <Form onSubmit={props.submit} />
     <Restaurant
       setRestaurant={props.setRestaurant}
       restaurant={props.restaurant}
       brands={props.brands}
     />
-    <Form onSubmit={props.submit} />
     <div id="slider-wrap">
       <h2>Select Calorie Range</h2>
       <Slider
