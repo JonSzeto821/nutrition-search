@@ -3,12 +3,9 @@ import { Field, reduxForm } from 'redux-form';
 // import 'carbInput.css';
 
 const CarbInput = props => {
-  const { handleSubmit, pristine, reset, submitting, value, onChange } = props;
-  // const { input: { value, onChange } } = props;
+  const { pristine, reset, submitting } = props;
   console.log(pristine, submitting);
-  const setMacro = value => {
-    console.log('onKeyPress', value);
-  };
+
   return (
     <form className="carb-input">
       <div>
