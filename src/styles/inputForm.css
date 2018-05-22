@@ -1,0 +1,36 @@
+* {
+  transition: all 0.2s;
+}
+
+.brand-search {
+  color: black;
+  text-align: center;
+}
+
+.inputbox {
+  background-color: #fff;
+  margin: 5px;
+  width: 90%;
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #2860a1;
+  /*opacity: 1;*/
+  color: white;
+  margin: 5px;
+}
+
+.clear-btn {
+  background-color: #fff;
+  /*opacity: 1;*/
+  margin: 5px;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.show {
+  opacity: 1 !important;
+}

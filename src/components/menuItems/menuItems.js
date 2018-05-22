@@ -1,20 +1,33 @@
 import React from 'react';
+import '../../styles/menuItems.css';
 
 const MenuItems = props => {
-  {
-    /*let menuItems = props.menuItems.map((item, i) =>{
-			return (
-				<li key={i}>
-					Item: {}
-				</li>
-			);
-		});*/
-  }
+  let foodItems = props.foodItems.map((item, i) => {
+    return (
+      <li key={i}>
+        {item.fields.item_name}
+        <ul>
+          <li>
+            <span className="bold">Calories:</span> {item.fields.nf_calories}
+          </li>
+          <li>
+            <span className="bold">Fats:</span> {item.fields.nf_total_fat}
+          </li>
+          <li>
+            <span className="bold">Carbs:</span>{' '}
+            {item.fields.nf_total_carbohydrate}
+          </li>
+          <li>
+            <span className="bold">Proteins:</span> {item.fields.nf_protein}
+          </li>
+        </ul>
+      </li>
+    );
+  });
 
   return (
     <div>
-      <h4>Menu Items</h4>
-      {/*<ul>{menuItems}</ul>*/}
+      <ul className="remove-bullet">{foodItems}</ul>
     </div>
   );
 };

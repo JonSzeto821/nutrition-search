@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/restaurants.css';
 
 const Restaurant = props => {
   // console.log(props);
@@ -9,7 +10,6 @@ const Restaurant = props => {
           props.setRestaurant(restaurant);
         }}
         key={i}>
-        {/*ID: {brand.fields._id} <br />*/}
         Restaurant: {restaurant.fields.name}
       </li>
     );
@@ -17,10 +17,11 @@ const Restaurant = props => {
 
   return (
     <div>
-      <h1>Food Page</h1>
-      <h3>Select restaurant from list below</h3>
-      <p>Currently viewing: {props.restaurant.fields.name}</p>
       <ul>{restaurants}</ul>
+      <p>
+        Currently viewing:{' '}
+        <span className="bold">{props.restaurant.fields.name}</span>
+      </p>
     </div>
   );
 };

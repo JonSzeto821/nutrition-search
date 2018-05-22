@@ -1,9 +1,10 @@
-#slider-wrap {
+#slider-container {
   padding: 10px;
-  margin: 10px;
+  background-color: #00bfff;
 }
 
 .input-range__label--max .input-range__label-container,
 .input-range__label-container {
   left: 0;
+  color: black;
 }

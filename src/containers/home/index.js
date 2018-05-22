@@ -4,38 +4,44 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Restaurant from '../../components/restaurants/restaurants';
 import Slider from '../../components/slider/slider';
-import Form from '../form';
+import Form from '../../components/searchInput/inputForm';
 import MenuItems from '../../components/menuItems/menuItems';
+import Filter from '../../components/filter/filter';
 import {
   submit,
   setRestaurant,
   setCals,
-  setVals,
   getFoodItems
 } from '../../modules/counter';
 
 const Home = props => (
   <div>
-    <Form onSubmit={props.submit} />
-    <Restaurant
-      setRestaurant={props.setRestaurant}
-      restaurant={props.restaurant}
-      brands={props.brands}
-    />
-    <div id="slider-wrap">
-      <h2>Select Calorie Range</h2>
+    <div id="brand-container">
+      <h1 className="center">Nutrition Search</h1>
+      <Form onSubmit={props.submit} />
+      <h3>Select restaurant from list below</h3>
+      <Restaurant
+        setRestaurant={props.setRestaurant}
+        restaurant={props.restaurant}
+        brands={props.brands}
+        className="center"
+      />
+    </div>
+    <div id="slider-container">
+      <h3 className="center">Select Calorie Range</h3>
       <Slider
         setCals={props.setCals}
         calories={props.calories}
-        setVals={props.setVals}
-        values={props.values}
+        values={props.values} //removing breaks slider functionality
       />
       <br />
       <br />
       <button onClick={props.getFoodItems}>Get Menu Items</button>
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
-    <MenuItems />
+    <h3>Menu Items</h3>
+    <Filter />
+    <MenuItems foodItems={props.foodItems} />
   </div>
 );
 
@@ -43,8 +49,9 @@ const mapStateToProps = state => ({
   foods: state.counter.foods,
   brands: state.counter.brands,
   restaurant: state.counter.restaurant,
-  values: state.counter.values,
-  calories: state.counter.calories
+  calories: state.counter.calories,
+  foodItems: state.counter.foodItems,
+  value: state.counter.value
 });
 
 const mapDispatchToProps = dispatch =>
@@ -54,7 +61,6 @@ const mapDispatchToProps = dispatch =>
       setRestaurant,
       setCals,
       getFoodItems,
-      setVals,
       changePage: () => push('/about-us')
     },
     dispatch

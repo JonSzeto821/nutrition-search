@@ -2,19 +2,20 @@ const initialState = {
   foods: [],
   brands: [],
   restaurant: { fields: { name: null, _id: null } },
-  calories: { fields: { cal_min: 200, cal_max: 800 } },
-  values: { min: 450, max: 850 },
+  foodItems: [],
+  calories: { fields: { cal_min: 123, cal_max: 789 } },
   macros: {
     fields: {
       nf_total_fat: null,
       nf_total_carbohydrate: null,
       nf_protein: null
     }
-  }
+  },
+  value: ''
 };
 
 export default (state = initialState, action) => {
-  // console.log(action);
+  console.log(action);
   switch (action.type) {
     case 'SUBMIT':
       return {
@@ -29,20 +30,14 @@ export default (state = initialState, action) => {
       };
 
     case 'SET_CALS':
-      console.log(action.payload);
+      // console.log(action.payload);
       let calories = {
         fields: { cal_min: action.payload.min, cal_max: action.payload.max }
       };
+      // console.log(calories);
       return {
         ...state,
         calories: calories
-      };
-
-    case 'SET_VALS':
-      // console.log(action.payload); //{min: 450, max: 867}
-      return {
-        ...state,
-        values: action.payload
       };
 
     case 'SET_MACROS':
@@ -52,9 +47,10 @@ export default (state = initialState, action) => {
       };
 
     case 'GET_ITEMS':
+      // console.log(action);
       return {
         ...state,
-        foodItems: action.payload
+        foodItems: action.payload //action.payload.hits throws unhandled rejection TypeError
       };
 
     default:
@@ -106,20 +102,10 @@ export const setRestaurant = value => {
 
 // define the calorie params
 export const setCals = values => {
-  console.log(values, this);
-  return dispatch => {
-    dispatch({
-      type: 'SET_CALS',
-      payload: values
-    });
-  };
-};
-
-export const setVals = values => {
   // console.log(values, this);
   return dispatch => {
     dispatch({
-      type: 'SET_VALS',
+      type: 'SET_CALS',
       payload: values
     });
   };
@@ -173,8 +159,8 @@ export const getFoodItems = () => (dispatch, getState) => {
       console.log(myJson);
 
       dispatch({
-        type: 'GET_ITEMS'
-        // payload: value
+        type: 'GET_ITEMS',
+        payload: myJson.hits
       });
     });
   // };

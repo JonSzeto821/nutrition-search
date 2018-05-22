@@ -14,3 +14,19 @@ body {
 button:disabled {
   opacity: 0.5;
 }
+
+.container {
+  display: block;
+  margin: auto;
+  /*padding: 0 10px;*/
+  max-width: 1200px;
+  width: 95%;
+}
+
+.center {
+  text-align: center;
+}
+
+#brand-container {
+  background-color: #ffa07a;
+}
