@@ -12,7 +12,7 @@ import {
   setRestaurant,
   setCals,
   getFoodItems
-} from '../../modules/counter';
+} from '../../actions/formActions';
 
 const Home = props => (
   <div>
