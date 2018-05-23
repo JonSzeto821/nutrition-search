@@ -46,12 +46,12 @@ const Home = props => (
 );
 
 const mapStateToProps = state => ({
-  foods: state.counter.foods,
-  brands: state.counter.brands,
-  restaurant: state.counter.restaurant,
-  calories: state.counter.calories,
-  foodItems: state.counter.foodItems,
-  value: state.counter.value
+  foods: state.reducer.foods,
+  brands: state.reducer.brands,
+  restaurant: state.reducer.restaurant,
+  calories: state.reducer.calories,
+  foodItems: state.reducer.foodItems,
+  value: state.reducer.value
 });
 
 const mapDispatchToProps = dispatch =>

@@ -77,10 +77,10 @@ export const getFoodItems = () => (dispatch, getState) => {
   // return dispatch => {
   let url = new URL(`https://api.nutritionix.com/v1_1/search/`);
   let data = {
-    brand_id: state.counter.restaurant._id,
+    brand_id: state.reducer.restaurant._id,
     results: '0:50',
-    cal_min: state.counter.calories.fields.cal_min,
-    cal_max: state.counter.calories.fields.cal_max,
+    cal_min: state.reducer.calories.fields.cal_min,
+    cal_max: state.reducer.calories.fields.cal_max,
     fields:
       'brand_name,item_name,nf_calories,nf_total_fat,nf_total_carbohydrate,nf_protein,nf_serving_size_qty,nf_serving_size_unit',
     appId: 'a49ed4c7',
