@@ -40,8 +40,8 @@ const Home = props => (
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
     <h3>Menu Items</h3>
-    <Filter />
     <MenuItems foodItems={props.foodItems} />
+    <Filter />
   </div>
 );
 

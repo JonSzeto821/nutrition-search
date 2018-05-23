@@ -3,7 +3,7 @@ const initialState = {
   brands: [],
   restaurant: { fields: { name: null, _id: null } },
   foodItems: [],
-  calories: { fields: { cal_min: 123, cal_max: 789 } },
+  calories: { fields: { cal_min: 250, cal_max: 500 } },
   macros: {
     fields: {
       nf_total_fat: null,
