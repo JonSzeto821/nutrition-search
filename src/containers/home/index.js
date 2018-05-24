@@ -2,11 +2,11 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Restaurant from '../../components/restaurants/restaurants';
-import Slider from '../../components/slider/slider';
-import Form from '../../components/searchInput/inputForm';
-import MenuItems from '../../components/menuItems/menuItems';
-import Filter from '../../components/filter/filter';
+import Restaurant from '../../components/restaurants';
+import Slider from '../../components/slider';
+import Form from '../../components/searchInput';
+import MenuItems from '../../components/menuItems';
+import Filter from '../../components/filter';
 import {
   submit,
   setRestaurant,
@@ -17,7 +17,7 @@ import {
 const Home = props => (
   <div>
     <div id="brand-container">
-      <h1 className="center">Nutrition Search</h1>
+      <h1>Nutrition Search</h1>
       <Form onSubmit={props.submit} />
       <h3>Select restaurant from list below</h3>
       <Restaurant
@@ -28,7 +28,7 @@ const Home = props => (
       />
     </div>
     <div id="slider-container">
-      <h3 className="center">Select Calorie Range</h3>
+      <h3>Select Calorie Range</h3>
       <Slider
         setCals={props.setCals}
         calories={props.calories}
@@ -36,7 +36,9 @@ const Home = props => (
       />
       <br />
       <br />
-      <button onClick={props.getFoodItems}>Get Menu Items</button>
+      <button onClick={props.getFoodItems} id="menu-btn">
+        Get Menu Items
+      </button>
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
     <h3>Menu Items</h3>

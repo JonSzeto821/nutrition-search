@@ -1,13 +1,13 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-// import 'carbInput.css';
+import '../../styles/macroInputs.css';
 
 const CarbInput = props => {
   const { pristine, reset, submitting } = props;
   console.log(pristine, submitting);
 
   return (
-    <form className="carb-input">
+    <form id="carb-input">
       <div>
         <label>Carbohydrate</label>
         <div>
@@ -16,15 +16,15 @@ const CarbInput = props => {
             component="input"
             type="text"
             placeholder="40 grams"
-            className="inputbox"
+            className="inputbox border box-size"
           />
         </div>
       </div>
       <div>
         <button
           type="button"
-          className={'clear-btn ' + (pristine ? 'hidden' : 'show')}
-          disabled={pristine || submitting}
+          className="clear-btn show"
+          // disabled={pristine || submitting}
           onClick={reset}>
           Clear
         </button>

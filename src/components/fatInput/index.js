@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-// import 'fatsInput.css';
+import '../../styles/macroInputs.css';
 
 const FatInput = props => {
   const { pristine, reset, submitting } = props;
@@ -8,7 +8,7 @@ const FatInput = props => {
   console.log(pristine, submitting);
 
   return (
-    <form className="carb-input">
+    <form id="fat-input">
       <div>
         <label>Fats</label>
         <div>
@@ -17,7 +17,7 @@ const FatInput = props => {
             component="input"
             type="text"
             placeholder="10 grams"
-            className="inputbox"
+            className="inputbox border box-size"
           />
         </div>
       </div>

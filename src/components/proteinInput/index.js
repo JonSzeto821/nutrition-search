@@ -1,13 +1,13 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-// import 'proteinInput.css';
+import '../../styles/macroInputs.css';
 
 const ProteinInput = props => {
   const { pristine, reset, submitting } = props;
   console.log(pristine, submitting);
 
   return (
-    <form className="protein-input">
+    <form id="protein-input">
       <div>
         <label>Protein</label>
         <div>
@@ -16,7 +16,7 @@ const ProteinInput = props => {
             component="input"
             type="text"
             placeholder="25 grams"
-            className="inputbox"
+            className="inputbox border box-size"
             // onChange={ ()=> setMacro(this.value) }
           />
         </div>

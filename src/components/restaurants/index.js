@@ -10,7 +10,7 @@ const Restaurant = props => {
           props.setRestaurant(restaurant);
         }}
         key={i}>
-        Restaurant: {restaurant.fields.name}
+        {restaurant.fields.name}
       </li>
     );
   });
