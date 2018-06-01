@@ -6,12 +6,14 @@ import Restaurant from '../../components/restaurants';
 import Slider from '../../components/slider';
 import Form from '../../components/searchInput';
 import MenuItems from '../../components/menuItems';
-import Filter from '../../components/filter';
+import Accordion from '../../components/accordion';
+import Pagination from '../../components/pagination';
 import {
   submit,
   setRestaurant,
   setCals,
-  getFoodItems
+  getFoodItems,
+  applyFilter
 } from '../../actions/formActions';
 
 const Home = props => (
@@ -26,14 +28,14 @@ const Home = props => (
         brands={props.brands}
         className="center"
       />
+      <p>
+        Currently viewing:{' '}
+        <span className="bold">{props.restaurant.fields.name}</span>
+      </p>
     </div>
     <div id="slider-container">
       <h3>Select Calorie Range</h3>
-      <Slider
-        setCals={props.setCals}
-        calories={props.calories}
-        values={props.values} //removing breaks slider functionality
-      />
+      <Slider setCals={props.setCals} calories={props.calories} />
       <br />
       <br />
       <button onClick={props.getFoodItems} id="menu-btn">
@@ -41,9 +43,12 @@ const Home = props => (
       </button>
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
-    <h3>Menu Items</h3>
-    <MenuItems foodItems={props.foodItems} />
-    <Filter />
+    <div id="menu-container">
+      <h3>Menu Items</h3>
+      <Accordion applyFilter={props.applyFilter} />
+      <Pagination props={props} />
+      <MenuItems foodItems={props.foodItems} />
+    </div>
   </div>
 );
 
@@ -53,7 +58,8 @@ const mapStateToProps = state => ({
   restaurant: state.reducer.restaurant,
   calories: state.reducer.calories,
   foodItems: state.reducer.foodItems,
-  value: state.reducer.value
+  value: state.reducer.value,
+  pagination: state.reducer.pagination
 });
 
 const mapDispatchToProps = dispatch =>
@@ -63,6 +69,7 @@ const mapDispatchToProps = dispatch =>
       setRestaurant,
       setCals,
       getFoodItems,
+      applyFilter,
       changePage: () => push('/about-us')
     },
     dispatch
