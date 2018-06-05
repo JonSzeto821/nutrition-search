@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Restaurant from '../../components/restaurants';
 import Slider from '../../components/slider';
 import Form from '../../components/searchInput';
-import MenuItems from '../../components/menuItems';
+// import MenuItems from '../../components/menuItems';
 import Accordion from '../../components/accordion';
 import Pagination from '../../components/pagination';
 import {
@@ -15,6 +15,7 @@ import {
   getFoodItems,
   applyFilter
 } from '../../actions/formActions';
+import { prevPage, nextPage } from '../../actions/paginationActions';
 
 const Home = props => (
   <div>
@@ -46,8 +47,13 @@ const Home = props => (
     <div id="menu-container">
       <h3>Menu Items</h3>
       <Accordion applyFilter={props.applyFilter} />
-      <Pagination props={props} />
-      <MenuItems foodItems={props.foodItems} />
+      <Pagination
+        prevPage={props.prevPage}
+        nextPage={props.nextPage}
+        pagination={props.pagination}
+        foodItems={props.foodItems}
+      />
+      {/*<MenuItems foodItems={props.foodItems} />*/}
     </div>
   </div>
 );
@@ -70,6 +76,8 @@ const mapDispatchToProps = dispatch =>
       setCals,
       getFoodItems,
       applyFilter,
+      prevPage,
+      nextPage,
       changePage: () => push('/about-us')
     },
     dispatch

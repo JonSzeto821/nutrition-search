@@ -1,0 +1,13 @@
+#page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  -webkit-padding-start: 0;
+}
+
+#page-numbers > li {
+  margin-right: 0.3em;
+  color: red;
+  /*user-select: none;*/
+  cursor: pointer;
+}
