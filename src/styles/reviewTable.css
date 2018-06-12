@@ -1,0 +1,12 @@
+#review-items {
+  background-color: aqua;
+  display: table;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+#review-items td {
+  border: 1px solid black;
+  padding: 5px;
+}

@@ -19,12 +19,7 @@
   /*opacity: 1;*/
   color: white;
   margin: 5px;
-}
-
-.clear-btn {
-  background-color: #fff;
-  /*opacity: 1;*/
-  margin: 5px;
+  border: none;
 }
 
 .hidden {

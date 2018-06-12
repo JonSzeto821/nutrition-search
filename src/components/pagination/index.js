@@ -1,100 +1,92 @@
 import React from 'react';
-// import MenuItems from '../../components/menuItems';
 import '../../styles/pagination.css';
+import '../../styles/menuItems.css';
 
-class Pagination extends React.Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this); //old way of binding
-  }
+const Pagination = props => {
+  const foodItems = props.foodItems;
+  const currentPage = props.pagination.fields.currentPage;
+  const itemsPerPage = props.pagination.fields.itemsPerPage;
 
-  // next = () => { //new way of binding
-  //   console.log(this.state.currentPage);
-  //   this.setState({
-  //     currentPage: this.state.currentPage + 1
-  //   });
-  // }
+  // Logic for displaying current foodItems
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = foodItems.slice(indexOfFirstItem, indexOfLastItem);
 
-  handleClick(event) {
-    this.setState({
-      currentPage: Number(event.target.id)
-    });
-  }
-
-  render() {
-    console.log(this);
-    const foodItems = this.props.foodItems;
-    console.log(this.props.foodItems);
-    const currentPage = this.props.pagination.fields.currentPage;
-    const itemsPerPage = this.props.pagination.fields.itemsPerPage;
-
-    console.log(foodItems, currentPage, itemsPerPage);
-    // Logic for displaying current foodItems
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = foodItems.slice(indexOfFirstItem, indexOfLastItem);
-    console.log(currentItems);
-
-    let renderTodos = currentItems.map((item, i) => {
-      return (
-        <li key={i} id="list-item">
-          <table>
-            <thead>
-              <tr>
-                <th colSpan="2">
-                  {item.fields.item_name} ({item.fields.nf_calories} cals)
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <span className="bold">Fats:</span>
-                  <div>{item.fields.nf_total_fat} g</div>
-                </td>
-                <td>
-                  <span className="bold">Carbs:</span>
-                  <div>{item.fields.nf_total_carbohydrate} g</div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <span className="bold">Proteins:</span>
-                  <div>{item.fields.nf_protein} g</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </li>
-      );
-    });
-
-    // Logic for displaying page numbers
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(foodItems.length / itemsPerPage); i++) {
-      pageNumbers.push(i);
-    }
-
-    const renderPageNumbers = pageNumbers.map(number => {
-      return (
-        <li key={number} id={number} onClick={this.handleClick}>
-          {number}
-        </li>
-      );
-    });
-
+  let renderItems = currentItems.map((item, i) => {
     return (
-      <div>
-        <ul id="menu-items">{renderTodos}</ul>
-
-        <ul id="page-numbers">
-          <button onClick={this.props.prevPage}>&#8592;</button>
-          {renderPageNumbers}
-          <button onClick={this.props.nextPage}>&#8594;</button>
-        </ul>
-      </div>
+      <li key={i} id="list-item">
+        <table>
+          <thead>
+            <tr>
+              <th colSpan="2">
+                {item.fields.item_name} ({item.fields.nf_calories} cals)
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span className="bold">Fats:</span>
+                <div>{item.fields.nf_total_fat} g</div>
+              </td>
+              <td>
+                <span className="bold">Carbs:</span>
+                <div>{item.fields.nf_total_carbohydrate} g</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span className="bold">Proteins:</span>
+                <div>{item.fields.nf_protein} g</div>
+              </td>
+              <td>
+                <button onClick={() => props.addToTotal(item)}>
+                  Add to Total
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
     );
+  });
+
+  // Logic for displaying page numbers, determines how many pages are needed to display all content
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(foodItems.length / itemsPerPage); i++) {
+    pageNumbers.push(i);
   }
-}
+  // console.log(pageNumbers.length === currentPage || 1);
+
+  // if (currentPage == page.Numbers.length){ end = true; }
+
+  //renders out the page numbers, but needs a way to direct user to specific page on click
+  const renderPageNumbers = pageNumbers.map(number => {
+    return (
+      <li key={number} id={number} onClick={() => props.handleClick(number)}>
+        {number}
+      </li>
+    );
+  });
+
+  return (
+    <div>
+      <ul id="menu-items">{renderItems}</ul>
+      <ul id="page-numbers">
+        <button
+          disabled={currentPage === 1 ? true : false}
+          onClick={props.prevPage}>
+          &#8592;
+        </button>
+        {renderPageNumbers}
+        <button
+          disabled={currentPage === pageNumbers.length ? true : false}
+          onClick={props.nextPage}>
+          &#8594;
+        </button>
+      </ul>
+    </div>
+  );
+};
 
 export default Pagination;

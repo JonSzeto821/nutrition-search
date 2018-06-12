@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 import Restaurant from '../../components/restaurants';
 import Slider from '../../components/slider';
 import Form from '../../components/searchInput';
-// import MenuItems from '../../components/menuItems';
 import Accordion from '../../components/accordion';
 import Pagination from '../../components/pagination';
+import ReviewTable from '../../components/reviewTable';
 import {
   submit,
   setRestaurant,
@@ -15,7 +15,12 @@ import {
   getFoodItems,
   applyFilter
 } from '../../actions/formActions';
-import { prevPage, nextPage } from '../../actions/paginationActions';
+import {
+  prevPage,
+  nextPage,
+  handleClick
+} from '../../actions/paginationActions';
+import { addToTotal, removeItem } from '../../actions/macroTotalActions';
 
 const Home = props => (
   <div>
@@ -33,6 +38,7 @@ const Home = props => (
         Currently viewing:{' '}
         <span className="bold">{props.restaurant.fields.name}</span>
       </p>
+      <button>Next &#8594;</button>
     </div>
     <div id="slider-container">
       <h3>Select Calorie Range</h3>
@@ -45,16 +51,23 @@ const Home = props => (
     </div>
     {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
     <div id="menu-container">
-      <h3>Menu Items</h3>
       <Accordion applyFilter={props.applyFilter} />
+      <h3>Menu Items</h3>
       <Pagination
         prevPage={props.prevPage}
         nextPage={props.nextPage}
+        handleClick={props.handleClick}
         pagination={props.pagination}
         foodItems={props.foodItems}
+        addToTotal={props.addToTotal}
       />
-      {/*<MenuItems foodItems={props.foodItems} />*/}
     </div>
+    <button className="next-screen">Next &#8594;</button>
+    <ReviewTable
+      selectedItems={props.selectedItems}
+      totals={props.totals}
+      removeItem={props.removeItem}
+    />
   </div>
 );
 
@@ -65,7 +78,9 @@ const mapStateToProps = state => ({
   calories: state.reducer.calories,
   foodItems: state.reducer.foodItems,
   value: state.reducer.value,
-  pagination: state.reducer.pagination
+  pagination: state.reducer.pagination,
+  selectedItems: state.reducer.selectedItems,
+  totals: state.reducer.totals
 });
 
 const mapDispatchToProps = dispatch =>
@@ -78,6 +93,9 @@ const mapDispatchToProps = dispatch =>
       applyFilter,
       prevPage,
       nextPage,
+      handleClick,
+      addToTotal,
+      removeItem,
       changePage: () => push('/about-us')
     },
     dispatch

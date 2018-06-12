@@ -4,7 +4,6 @@ import '../../styles/inputForm.css';
 
 const SimpleForm = props => {
   const { handleSubmit, pristine, reset, submitting } = props;
-  // console.log(pristine, submitting);
   return (
     <form onSubmit={handleSubmit} className="brand-search">
       <div>

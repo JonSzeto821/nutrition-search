@@ -1,6 +1,6 @@
 // used to search for restaurants based on search
 export const submit = values => {
-  console.log(values, this);
+  // console.log(values, this);
   return dispatch => {
     let url = new URL('https://api.nutritionix.com/v1_1/brand/search');
     let data = {
@@ -63,18 +63,11 @@ export const setMacros = values => {
   };
 };
 
-// find food items with brand id & cal params
-// export const getFoodItems2 = value => {
-//   console.log(value, this);
-
-// };
-
 //return food items based on brand and calorie params
 export const getFoodItems = () => (dispatch, getState) => {
   const state = getState();
-  console.log(state);
+  // console.log(state);
 
-  // return dispatch => {
   let url = new URL(`https://api.nutritionix.com/v1_1/search/`);
   let data = {
     brand_id: state.reducer.restaurant._id,
@@ -104,5 +97,14 @@ export const getFoodItems = () => (dispatch, getState) => {
         payload: myJson.hits
       });
     });
-  // };
+};
+
+//apply filter params to food items list
+export const applyFilter = () => {
+  console.log('APPLY FILTER');
+  return dispatch => {
+    dispatch({
+      type: 'APPLY_FILTER'
+    });
+  };
 };

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald');
+
 html {
   font-size: 100%;
 }
@@ -5,28 +7,48 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
-    sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Oswald', sans-serif;
 }
 
 button:disabled {
   opacity: 0.5;
 }
 
-.container {
-  display: block;
-  margin: auto;
-  /*padding: 0 10px;*/
-  max-width: 1200px;
-  width: 95%;
+button {
+  background-color: white;
 }
 
-.center {
-  text-align: center;
+.container {
+  display: block;
+  max-width: 1200px;
+  background-color: #d3d3d3;
+  padding: 0 0 15px 0;
 }
 
 #brand-container {
   background-color: #ffa07a;
+  padding: 1px 10px 10px 10px;
+}
+
+#brand-container h1,
+#brand-container h3,
+#slider-container h3,
+#menu-container h3 {
+  text-align: center;
+}
+
+#menu-btn {
+  background-color: #2860a1;
+  color: white;
+  border: none;
+  display: block;
+  margin: auto;
 }
