@@ -27,28 +27,10 @@ button {
 }
 
 .container {
+  /*border: 2px solid black;*/
   display: block;
+  margin: auto;
   max-width: 1200px;
   background-color: #d3d3d3;
   padding: 0 0 15px 0;
-}
-
-#brand-container {
-  background-color: #ffa07a;
-  padding: 1px 10px 10px 10px;
-}
-
-#brand-container h1,
-#brand-container h3,
-#slider-container h3,
-#menu-container h3 {
-  text-align: center;
-}
-
-#menu-btn {
-  background-color: #2860a1;
-  color: white;
-  border: none;
-  display: block;
-  margin: auto;
 }

@@ -1,3 +1,5 @@
+import { NotificationManager } from 'react-notifications';
+
 const initialState = {
   foods: [],
   brands: [],
@@ -96,6 +98,7 @@ export default (state = initialState, action) => {
 
     case 'APPLY_FILTER':
       // console.log(state);
+      console.log('filter is logging');
       let filterList = state.initialFoodItems.filter(function(el) {
         return (
           el.fields.nf_protein <=
@@ -156,40 +159,13 @@ export default (state = initialState, action) => {
       };
 
     case 'ADD_TOTAL':
-      // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-      // const selectedCals = state.selectedItems.cals;
-      // const selectedFats = state.selectedItems.fats;
-      // const selectedCarbs = state.selectedItems.carbs;
-      // const selectedProteins = state.selectedItems.proteins;
-
-      // console.log(action);
-      // console.log(selectedCals.push(action.item.fields.nf_calories));
-      // console.log(selectedFats.push(action.item.fields.nf_total_fat));
-      // console.log(selectedCarbs.push(action.item.fields.nf_total_carbohydrate));
-      // console.log(selectedProteins.push(action.item.fields.nf_protein));
-
-      // let calSum = selectedCals.reduce(reducer);
-      // let fatSum = selectedFats.reduce(reducer);
-      // let carbSum = selectedCarbs.reduce(reducer);
-      // let proteinSum = selectedProteins.reduce(reducer);
-
-      // let selectedItems = {
-      //   cals: selectedCals,
-      //   fats: selectedFats,
-      //   carbs: selectedCarbs,
-      //   proteins: selectedProteins
-      // }
-
-      // let totals = {
-      //   calSum: calSum,
-      //   fatSum: fatSum,
-      //   carbSum: carbSum,
-      //   proteinSum: proteinSum
-      // }
-
       console.log(state.selectedItems);
       // console.log(totals);
 
+      console.log(state, action);
+      NotificationManager.success(
+        `${action.item.fields.item_name} added to your list`
+      );
       return {
         ...state,
         selectedItems: [...state.selectedItems, action.item] //removed ', action.item' from array
