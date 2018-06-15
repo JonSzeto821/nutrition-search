@@ -1,11 +1,8 @@
 import React from 'react';
-import '../../styles/reviewTable.css';
+import '../../styles/step3/reviewTable.css';
 
 const ReviewTable = props => {
   console.log(props);
-  {
-    /*try using the map function to list out each food item macros*/
-  }
   let total = {
     nf_calories: 0,
     nf_total_fat: 0,
@@ -59,39 +56,6 @@ const ReviewTable = props => {
       </table>
     </div>
   );
-
-  {
-    /*	return(
-		<table id='review-items'>
-			<thead>
-				<tr>
-					<td>Item</td>
-					<td>Calories</td>
-					<td>Fats</td>
-					<td>Carbs</td>
-					<td>Protein</td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td>
-					<td>{props.selectedCals}</td>
-					<td>{props.fatTotal}</td>
-					<td>{props.carbTotal}</td>
-					<td>{props.proteinTotal}</td>
-				</tr>
-				<tr>
-					<td>Total</td>
-					<td>{props.totals.calSum}</td>
-					<td>{props.totals.fatSum}</td>
-					<td>{props.totals.carbSum}</td>
-					<td>{props.totals.proteinSum}</td>
-				</tr>
-			</tbody>
-		</table>
-		)
-	*/
-  }
 };
 
 export default ReviewTable;

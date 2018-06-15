@@ -1,4 +1,5 @@
 import React from 'react';
+import filterIcon from '../../styles/step2/filter_icon.svg';
 
 class AccordSection extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ class AccordSection extends React.Component {
         <button className="button">toggle</button>
         <div className="sectionhead" onClick={this.handleClick}>
           {this.props.title}
+          <img id="filterIcon" src={filterIcon} alt="Filter Icon" />
         </div>
         <div className="articlewrap">
           <div className="article">{this.props.children}</div>

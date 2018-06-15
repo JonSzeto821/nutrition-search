@@ -1,9 +1,14 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import '../../styles/inputForm.css';
+import '../../styles/step1/inputForm.css';
 
 const SimpleForm = props => {
+  // console.log(props, props.onSubmit, props.handleSubmit, props.submit);
+  console.log(props.onSubmit);
+  console.log(props.handleSubmit);
+  console.log(props.submit);
   const { handleSubmit, pristine, reset, submitting } = props;
+  // console.log(handleSubmit);
   return (
     <form onSubmit={handleSubmit} className="brand-search">
       <div>
@@ -23,7 +28,7 @@ const SimpleForm = props => {
           type="submit"
           className={'submit-btn ' + (pristine ? 'hidden' : 'show')}
           disabled={pristine || submitting}>
-          Search Brand
+          Search
         </button>
         <button
           type="button"

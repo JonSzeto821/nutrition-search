@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import '../../styles/macroInputs.css';
+import '../../styles/step2/macroInputs.css';
 
 const FatInput = props => {
   return (

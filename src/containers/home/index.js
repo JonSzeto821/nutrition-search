@@ -2,12 +2,11 @@ import React from 'react';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Restaurant from '../../components/restaurants';
-import Slider from '../../components/slider';
-import Form from '../../components/searchInput';
-import Accordion from '../../components/accordion';
-import Pagination from '../../components/pagination';
-import ReviewTable from '../../components/reviewTable';
+import Stepzilla from 'react-stepzilla';
+import Notification from '../../components/notification';
+import Step1 from '../../components/steps/step1';
+import Step2 from '../../components/steps/step2';
+import Step3 from '../../components/steps/step3';
 import {
   submit,
   setRestaurant,
@@ -21,61 +20,73 @@ import {
   handleClick
 } from '../../actions/paginationActions';
 import { addToTotal, removeItem } from '../../actions/macroTotalActions';
+import '../../styles/prog-tracker.css';
+import '../../styles/step1/step1.css';
+import '../../styles//step2/step2.css';
 
-const Home = props => (
-  <div>
-    <div id="brand-container">
-      <h1>Nutrition Search</h1>
-      <Form onSubmit={props.submit} />
-      <h3>Select restaurant from list below</h3>
-      <Restaurant
-        setRestaurant={props.setRestaurant}
-        restaurant={props.restaurant}
-        brands={props.brands}
-        className="center"
-      />
-      <p>
-        Currently viewing:{' '}
-        <span className="bold">{props.restaurant.fields.name}</span>
-      </p>
-      <button>Next &#8594;</button>
+const Home = props => {
+  const steps = [
+    {
+      name: 'Search Restaurant',
+      component: (
+        <Step1
+          submit={props.submit}
+          setRestaurant={props.setRestaurant}
+          restaurant={props.restaurant}
+          brands={props.brands}
+          jumpToStep={props.jumpToStep}
+        />
+      )
+    },
+    {
+      name: 'Calorie Input',
+      component: (
+        <Step2
+          setCals={props.setCals}
+          calories={props.calories}
+          getFoodItems={props.getFoodItems}
+          prevPage={props.prevPage}
+          nextPage={props.nextPage}
+          handleClick={props.handleClick}
+          restaurant={props.restaurant}
+          pagination={props.pagination}
+          foodItems={props.foodItems}
+          addToTotal={props.addToTotal}
+          applyFilter={props.applyFilter}
+        />
+      )
+    },
+    {
+      name: 'Review',
+      component: (
+        <Step3
+          selectedItems={props.selectedItems}
+          totals={props.totals}
+          removeItem={props.removeItem}
+          addToTotal={props.addToTotal}
+        />
+      )
+    }
+  ];
+
+  return (
+    <div>
+      <div>
+        <Notification />
+      </div>
+      <div className="step-progress">
+        <Stepzilla stepsNavigation={false} steps={steps} props={props} />
+      </div>
     </div>
-    <div id="slider-container">
-      <h3>Select Calorie Range</h3>
-      <Slider setCals={props.setCals} calories={props.calories} />
-      <br />
-      <br />
-      <button onClick={props.getFoodItems} id="menu-btn">
-        Get Menu Items
-      </button>
-    </div>
-    {/*<button onClick={() => props.getFoodItems(props.brand)} foods={props.foods}>Get Nutrition</button>*/}
-    <div id="menu-container">
-      <Accordion applyFilter={props.applyFilter} />
-      <h3>Menu Items</h3>
-      <Pagination
-        prevPage={props.prevPage}
-        nextPage={props.nextPage}
-        handleClick={props.handleClick}
-        pagination={props.pagination}
-        foodItems={props.foodItems}
-        addToTotal={props.addToTotal}
-      />
-    </div>
-    <button className="next-screen">Next &#8594;</button>
-    <ReviewTable
-      selectedItems={props.selectedItems}
-      totals={props.totals}
-      removeItem={props.removeItem}
-    />
-  </div>
-);
+  );
+};
 
 const mapStateToProps = state => ({
   foods: state.reducer.foods,
   brands: state.reducer.brands,
   restaurant: state.reducer.restaurant,
   calories: state.reducer.calories,
+  initialFoodItems: state.reducer.initialFoodItems,
   foodItems: state.reducer.foodItems,
   value: state.reducer.value,
   pagination: state.reducer.pagination,
@@ -101,4 +112,7 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);

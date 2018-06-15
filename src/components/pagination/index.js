@@ -1,6 +1,6 @@
 import React from 'react';
-import '../../styles/pagination.css';
-import '../../styles/menuItems.css';
+import '../../styles/step2/pagination.css';
+import '../../styles/step2/menuItems.css';
 
 const Pagination = props => {
   const foodItems = props.foodItems;

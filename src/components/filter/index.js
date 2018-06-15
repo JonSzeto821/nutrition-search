@@ -2,7 +2,7 @@ import React from 'react';
 import ProteinInput from '../proteinInput';
 import CarbInput from '../carbInput';
 import FatInput from '../fatInput';
-import '../../styles/macroInputs.css';
+import '../../styles/step2/macroInputs.css';
 
 const Filter = props => (
   <div id="filter-wrap">
