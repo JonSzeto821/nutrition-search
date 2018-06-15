@@ -12,12 +12,11 @@
 }
 
 #filter-wrap {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 0 10px;
-  background-color: #e0eee0;
-   {
-    /*light green*/
-  }
+  background-color: #e0eee0; /*light green*/
+  width: 100%;
+  margin: auto;
 }
 
 #filter-wrap h3 {

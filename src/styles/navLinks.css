@@ -1,5 +1,6 @@
 #nav-links td {
   border-right: 1px solid black;
   padding: 5px;
-  background-color: aqua;
+  line-height: 35px;
+  background-color: yellow;
 }

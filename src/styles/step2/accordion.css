@@ -1,5 +1,5 @@
 .main .title {
-  color: #fff;
+  /*color: #fff;*/
   background: #c80e3d;
   text-align: center;
   font-weight: 700;
@@ -10,12 +10,13 @@
 .section {
   position: relative;
   width: 100%;
-  border-bottom: 5px solid #c80e3d;
+  /*  border-bottom: 5px solid #c80e3d;
   border-left: 2px solid #c80e3d;
-  border-right: 2px solid #c80e3d;
+  border-right: 2px solid #c80e3d;*/
 }
 .section .button {
   position: absolute;
+  top: 5px;
   right: 0;
   margin: 0;
   padding: 0;
@@ -82,7 +83,7 @@
   background: white;
   cursor: pointer;
   font-weight: 700;
-  color: #888;
+  /*color: #888;*/
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 1em;
@@ -93,4 +94,9 @@
   /*padding: 5px;*/
   color: #333;
   /*line-height: 1.3;*/
+}
+
+#filterIcon {
+  width: 20px;
+  height: 20px;
 }

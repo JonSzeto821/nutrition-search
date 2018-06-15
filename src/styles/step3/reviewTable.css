@@ -1,5 +1,5 @@
 #review-items {
-  background-color: aqua;
+  background-color: rgb(201, 201, 201);
   display: table;
   width: 90%;
   margin: auto;
@@ -7,6 +7,6 @@
 }
 
 #review-items td {
-  border: 1px solid black;
+  border-top: 1px solid black;
   padding: 5px;
 }

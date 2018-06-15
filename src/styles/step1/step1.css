@@ -1,0 +1,37 @@
+#step1-container {
+  /*color: blue;*/
+  background-color: #ffa07a;
+  padding: 0 10px 10px 10px;
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+#step1-container h1,
+#step1-container h3,
+#slider-container h3,
+#menu-container h3 {
+  text-align: center;
+}
+
+#step1-container ul {
+  text-align: left;
+  list-style-position: inside;
+  /*list-style-type: none;*/
+  padding-left: 0;
+  /*border: 1px solid black;*/
+}
+
+#step1-container li {
+  text-align: left;
+  list-style-position: inside;
+  list-style-type: none;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 2.5px 0;
+  background-color: rgb(184, 198, 121);
+  text-align: center;
+  line-height: 35px;
+}
+
+/*Brand Search*/
