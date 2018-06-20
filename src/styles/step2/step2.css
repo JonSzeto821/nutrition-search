@@ -7,18 +7,59 @@
 
 #step2-container {
   display: block;
-  margin: auto;
-  width: 90%;
-  border: 1px dashed blue;
+  margin: 0 auto;
+  /*padding: 0 10px;*/
+  width: 100%;
+  /*border: 1px dashed blue;*/
+  background-color: #f5f5f5;
 }
 
-.accordion {
+#step2-container h1 {
+  background-color: rgb(45, 106, 41);
+  margin: 0;
+  color: #f5f5f5;
 }
 
 #menu-btn {
-  background-color: #2860a1;
-  color: yellow;
+  background-color: rgb(45, 106, 41);
+  color: #f5f5f5;
   border: none;
   display: block;
   margin: auto;
+  line-height: 44pt;
+  border-radius: 3px;
+}
+
+#calorie-title {
+  background-color: rgb(131, 163, 65);
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #f5f5f5;
+}
+@media only screen and (min-width: 650px) {
+  #step2-container {
+    width: 90%;
+    height: 800px;
+  }
+
+  #slider-container {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    height: 752px;
+    border-right: 1px solid black;
+  }
+
+  #menu-container {
+    display: inline-block;
+    width: 50%;
+    height: 752px;
+    overflow-y: scroll;
+    margin: 0;
+  }
+
+  #menu-btn {
+    margin-bottom: 10px;
+    line-height: 30pt;
+  }
 }

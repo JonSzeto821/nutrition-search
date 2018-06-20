@@ -6,10 +6,9 @@ import '../../styles/step2/macroInputs.css';
 
 const Filter = props => (
   <div id="filter-wrap">
-    <h3>Macro Input</h3>
     <p>
-      <span className="bold">Note:</span> Input the amount in grams, unit of
-      measurement ('g', or 'grams') not needed
+      <span className="bold">Note:</span> Unit of measurement ('g', or 'grams')
+      not needed
     </p>
     <div>
       <table id="macro-input">

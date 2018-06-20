@@ -4,13 +4,13 @@ import '../../styles/step1/inputForm.css';
 
 const SimpleForm = props => {
   // console.log(props, props.onSubmit, props.handleSubmit, props.submit);
-  console.log(props.onSubmit);
-  console.log(props.handleSubmit);
-  console.log(props.submit);
+  // console.log(props.onSubmit);
+  // console.log(props.handleSubmit);
+  // console.log(props.submit);
   const { handleSubmit, pristine, reset, submitting } = props;
   // console.log(handleSubmit);
   return (
-    <form onSubmit={handleSubmit} className="brand-search">
+    <form onSubmit={handleSubmit} id="brand-search">
       <div>
         <label>Search Restaurant</label>
         <div>
@@ -19,7 +19,7 @@ const SimpleForm = props => {
             component="input"
             type="text"
             placeholder="McDonald's"
-            className="inputbox"
+            id="searchbox"
           />
         </div>
       </div>

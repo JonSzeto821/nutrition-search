@@ -1,8 +1,10 @@
 import React from 'react';
+import addIcon from '../../styles/step2/add_icon.svg';
 import '../../styles/step2/pagination.css';
 import '../../styles/step2/menuItems.css';
 
 const Pagination = props => {
+  console.log(props);
   const foodItems = props.foodItems;
   const currentPage = props.pagination.fields.currentPage;
   const itemsPerPage = props.pagination.fields.itemsPerPage;
@@ -40,8 +42,10 @@ const Pagination = props => {
                 <div>{item.fields.nf_protein} g</div>
               </td>
               <td>
-                <button onClick={() => props.addToTotal(item)}>
-                  Add to Total
+                <button
+                  onClick={() => props.addToTotal(item)}
+                  className="add-btn">
+                  <img id="addIcon" src={addIcon} alt="Add Icon" />add
                 </button>
               </td>
             </tr>
@@ -76,13 +80,13 @@ const Pagination = props => {
         <button
           disabled={currentPage === 1 ? true : false}
           onClick={props.prevPage}>
-          &#8592;
+          &#8592; Back
         </button>
         {renderPageNumbers}
         <button
           disabled={currentPage === pageNumbers.length ? true : false}
           onClick={props.nextPage}>
-          &#8594;
+          Next &#8594;
         </button>
       </ul>
     </div>

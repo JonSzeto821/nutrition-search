@@ -6,23 +6,25 @@ import '../../styles/navLinks.css';
 
 const App = () => (
   <div>
-    <header>
-      <table id="nav-links">
-        <tbody>
-          <tr>
-            <td>
-              <Link to="/">Home</Link>
-            </td>
-            <td>
-              <Link to="/about">About App</Link>
-            </td>
-            <td>
-              <Link to="/Nutritionix">Nutritionix API</Link>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </header>
+    <div id="header">
+      <header>
+        <table id="nav-links">
+          <tbody>
+            <tr>
+              <td>
+                <Link to="/">Home</Link>
+              </td>
+              <td>
+                <Link to="/about">About App</Link>
+              </td>
+              <td>
+                <Link to="/Nutritionix">Nutritionix</Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </header>
+    </div>
 
     <main>
       <Route exact path="/" component={Home} />

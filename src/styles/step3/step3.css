@@ -1,0 +1,32 @@
+#step3-container {
+  width: 100%;
+  background-color: #f5f5f5;
+  margin: auto;
+}
+
+#step3-container h1 {
+  background-color: rgb(45, 106, 41);
+  margin: 0;
+  color: #f5f5f5;
+}
+
+#reset-btn {
+  background-color: #2860a1;
+  color: #f5f5f5;
+  border: none;
+  display: block;
+  margin: 0 auto;
+  line-height: 44pt;
+  border-radius: 3px;
+  border: none;
+}
+
+@media only screen and (min-width: 650px) {
+  #step3-container {
+    width: 90%;
+  }
+
+  #reset-btn {
+    line-height: 30pt;
+  }
+}

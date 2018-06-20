@@ -9,15 +9,17 @@ const Slider = props => {
   let obj = { max, min };
 
   return (
-    <InputRange
-      id="slider"
-      maxValue={1200}
-      minValue={0}
-      formatLabel={calories => `${calories} cal`}
-      value={obj}
-      onChange={calories => props.setCals(calories)}
-      step={5}
-    />
+    <div id="slider-wrap">
+      <InputRange
+        id="slider"
+        maxValue={1200}
+        minValue={0}
+        formatLabel={calories => `${calories} cal`}
+        value={obj}
+        onChange={calories => props.setCals(calories)}
+        step={5}
+      />
+    </div>
   );
 };
 

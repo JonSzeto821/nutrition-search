@@ -1,9 +1,15 @@
 #protein-input label,
 #carb-input label,
-#fat-input label,
-#calorie-input label {
-  padding-left: 5px;
+#fat-input label {
   font-size: 18px;
+  color: rgb(45, 106, 41);
+}
+
+#protein-input input,
+#carb-input input,
+#fat-input input {
+  text-align: center;
+  background-color: white;
 }
 
 .box-size {
@@ -13,32 +19,15 @@
 
 #filter-wrap {
   /*border: 1px solid black;*/
-  padding: 0 10px;
+  padding: 0 10px 10px 10px;
   background-color: #e0eee0; /*light green*/
   width: 100%;
-  margin: auto;
-}
-
-#filter-wrap h3 {
-  text-align: center;
-}
-
-#filter-wrap h3,
-#filter-wrap p {
-  margin: 5px 0;
+  margin: 0 auto;
 }
 
 #filter-wrap p {
   font-size: 12px;
-}
-
-.clear-btn {
-  background-color: #fff;
-   {
-    /*white*/
-  }
-  /*opacity: 1;*/
-  margin: 5px;
+  margin: 0;
 }
 
 #filter-btn {
@@ -46,16 +35,28 @@
   display: block;
   color: white;
   margin: 10px auto;
-  /*margin: auto;*/
   border: none;
+  line-height: 44pt;
+  border-radius: 3px;
 }
 
 #macro-input td {
-  /*border: 1px dashed red;*/
   text-align: center;
   padding: 0;
 }
 
 table#macro-input {
   margin: auto;
+}
+
+@media only screen and (min-width: 650px) {
+  #filter-btn {
+    line-height: 30pt;
+  }
+
+  #filter-wrap p {
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 0;
+  }
 }

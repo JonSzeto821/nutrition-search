@@ -1,10 +1,22 @@
 #step1-container {
-  /*color: blue;*/
-  background-color: #ffa07a;
-  padding: 0 10px 10px 10px;
-  width: 90%;
+  /*color: white;*/
+  /*padding: 0 10px 10px 10px;*/
+  width: 100%;
   display: block;
   margin: auto;
+  background-color: #f5f5f5;
+}
+
+#step1-container h1 {
+  margin: 0;
+  color: white;
+  background-color: rgb(45, 106, 41);
+}
+
+#step1-container h3 {
+  color: rgb(45, 106, 41);
+  margin: 0;
+  padding: 20px 0 0 0;
 }
 
 #step1-container h1,
@@ -17,9 +29,7 @@
 #step1-container ul {
   text-align: left;
   list-style-position: inside;
-  /*list-style-type: none;*/
   padding-left: 0;
-  /*border: 1px solid black;*/
 }
 
 #step1-container li {
@@ -27,11 +37,32 @@
   list-style-position: inside;
   list-style-type: none;
   padding: 5px;
-  border: 1px solid black;
   margin: 2.5px 0;
-  background-color: rgb(184, 198, 121);
+  background-color: rgb(45, 106, 41);
+  color: #f5f5f5;
   text-align: center;
-  line-height: 35px;
+  line-height: 44pt;
+  border-radius: 3px;
+  font-size: 20px;
 }
 
-/*Brand Search*/
+#step1-body {
+  padding: 0 10px 10px 10px;
+  background-color: #f5f5f5;
+}
+
+@media only screen and (min-width: 650px) {
+  #step1-container {
+    width: 90%;
+  }
+
+  #step1-body {
+    border: 2px dashed red;
+    /*    width: 50%;*/
+  }
+
+  #step1-container li {
+    line-height: 30px;
+    font-size: 16px;
+  }
+}

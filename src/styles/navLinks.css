@@ -1,6 +1,23 @@
 #nav-links td {
   border-right: 1px solid black;
-  padding: 5px;
   line-height: 35px;
-  background-color: yellow;
+  background-color: #f5f5f5;
+  width: calc(100% / 3);
+  font-size: 16px;
+}
+
+#nav-links td:last-of-type {
+  border-right: none;
+  padding: 0 5px;
+}
+
+#nav-links {
+  margin: auto;
+  width: 100%;
+}
+
+@media only screen and (min-width: 650px) {
+  #nav-links {
+    width: 80%;
+  }
 }

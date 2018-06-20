@@ -1,12 +1,101 @@
-#review-items {
-  background-color: rgb(201, 201, 201);
-  display: table;
-  width: 90%;
-  margin: auto;
-  text-align: center;
+#item-name {
+  font-size: 12px;
+  text-align: left;
+  font-weight: 700;
 }
 
-#review-items td {
+#removeIcon {
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+}
+
+#macro-total {
   border-top: 1px solid black;
-  padding: 5px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.hide-btn-outline {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+#review-container {
+  /*border: 3px dashed red;*/
+  width: 100%;
+  margin: auto;
+  /*margin-bottom: 15px;*/
+}
+
+#review-items {
+  display: table;
+  margin: auto;
+  /*padding: 0 5px;*/
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: transparent;
+}
+
+#review-items table {
+  border: 1px solid black;
+}
+
+#review-items th,
+#review-items td {
+  padding: 0 5px;
+  margin: 0 15px;
+  background-color: rgba(224, 238, 224, 0.9);
+}
+#review-items th {
+  text-align: left;
+}
+#review-items thead th {
+  background-color: rgb(131, 163, 65);
+  color: #f5f5f5;
+  font-size: 14px;
+}
+#review-items tbody tr:hover {
+  background-color: rgba(112, 128, 144, 1);
+}
+#review-items tbody td {
+  position: relative;
+}
+#review-items tbody td:hover:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(112, 128, 144, 0.9);
+  z-index: -1;
+}
+
+@media only screen and (min-width: 650px) {
+  #item-name {
+    font-size: 16px;
+    padding-left: 5px;
+  }
+
+  #review-items thead th {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  #review-items {
+    max-width: 675px;
+    margin: 20px auto;
+    border-radius: 3px;
+  }
+
+  #review-items tbody td {
+    text-align: center;
+    padding: 5px;
+  }
 }

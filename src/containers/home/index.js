@@ -22,12 +22,13 @@ import {
 import { addToTotal, removeItem } from '../../actions/macroTotalActions';
 import '../../styles/prog-tracker.css';
 import '../../styles/step1/step1.css';
-import '../../styles//step2/step2.css';
+import '../../styles/step2/step2.css';
+import '../../styles/step3/step3.css';
 
 const Home = props => {
   const steps = [
     {
-      name: 'Search Restaurant',
+      name: 'Search',
       component: (
         <Step1
           submit={props.submit}
@@ -39,7 +40,7 @@ const Home = props => {
       )
     },
     {
-      name: 'Calorie Input',
+      name: 'Macro Input',
       component: (
         <Step2
           setCals={props.setCals}
@@ -53,6 +54,7 @@ const Home = props => {
           foodItems={props.foodItems}
           addToTotal={props.addToTotal}
           applyFilter={props.applyFilter}
+          totals={props.totals}
         />
       )
     },
@@ -75,7 +77,15 @@ const Home = props => {
         <Notification />
       </div>
       <div className="step-progress">
-        <Stepzilla stepsNavigation={false} steps={steps} props={props} />
+        <Stepzilla
+          stepsNavigation={false}
+          nextButtonText={'>'}
+          backButtonText={'<'}
+          nextButtonCls={'btn'}
+          backButtonCls={'btn'}
+          steps={steps}
+          props={props}
+        />
       </div>
     </div>
   );

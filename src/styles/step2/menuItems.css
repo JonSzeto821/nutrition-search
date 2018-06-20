@@ -2,10 +2,21 @@
   border: 1px solid black;
 }
 
+.menu-items {
+  background-color: rgb(131, 163, 65);
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #f5f5f5;
+}
+
+#menu-items {
+  background-color: #f5f5f5;
+}
+
 #menu-items li {
   padding: 5px;
-  margin: 10px;
-  background-color: #f8ffaf;
+  margin-bottom: 10px;
+  background-color: rgb(217, 217, 217);
 }
 
 th {
@@ -27,11 +38,31 @@ ul#menu-items {
 
 #list-item table {
   /*border: 1px solid black;*/
-  width: 80%;
+  width: 90%;
   margin: auto;
   max-width: 80%;
 }
 
 #list-item th {
   color: black;
+}
+
+#addIcon {
+  width: 25px;
+  height: 25px;
+  padding-top: 2px;
+}
+
+.add-btn {
+  border-radius: 5px;
+  padding: 7.5px;
+  line-height: 30px;
+  background-color: rgb(131, 163, 65);
+}
+
+@media only screen and (min-width: 650px) {
+  #menu-items li {
+    margin: 0 5px 10px 5px;
+    border-radius: 3px;
+  }
 }

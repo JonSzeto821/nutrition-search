@@ -24,7 +24,7 @@ const initialState = {
   pagination: {
     fields: {
       currentPage: 1,
-      itemsPerPage: 10,
+      itemsPerPage: 8,
       totalPages: [] //need to use an array if passing value through as a prop into pagination comp
     }
   },
@@ -160,6 +160,7 @@ export default (state = initialState, action) => {
 
     case 'ADD_TOTAL':
       console.log(state.selectedItems);
+      console.log(action.item);
       // console.log(totals);
 
       console.log(state, action);
@@ -176,6 +177,8 @@ export default (state = initialState, action) => {
     case 'REMOVE_ITEM':
       let selectedItems = [...state.selectedItems];
       selectedItems.splice(action.key, 1);
+
+      NotificationManager.error(`Item removed`);
 
       return {
         ...state,

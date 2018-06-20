@@ -6,8 +6,7 @@ import '../../styles/step2/accordion.css';
 const Accordion = props => {
   return (
     <div className="main">
-      {/*      <div className="title" />*/}
-      <AccordSection title="Macro Filter">
+      <AccordSection title="Filter">
         <Filter applyFilter={props.applyFilter} />
       </AccordSection>
     </div>

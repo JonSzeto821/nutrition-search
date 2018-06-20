@@ -1,4 +1,5 @@
 import React from 'react';
+import RemoveIcon from '../../styles/step3/remove_icon.svg';
 import '../../styles/step3/reviewTable.css';
 
 const ReviewTable = props => {
@@ -17,34 +18,40 @@ const ReviewTable = props => {
 
     return (
       <tr key={i} id="list-item">
-        <td>{item.fields.item_name}</td>
+        <td>
+          <div id="item-name">{item.fields.item_name}</div>
+        </td>
         <td>{item.fields.nf_calories}</td>
         <td>{item.fields.nf_total_fat}</td>
         <td>{item.fields.nf_total_carbohydrate}</td>
         <td>{item.fields.nf_protein}</td>
         <td>
-          <button onClick={() => props.removeItem(i)}>Remove</button>
+          <button
+            onClick={() => props.removeItem(i)}
+            className="hide-btn-outline">
+            <img id="removeIcon" src={RemoveIcon} alt="Remove Icon" />
+          </button>
         </td>
       </tr>
     );
   });
 
   return (
-    <div>
+    <div id="review-container">
       <table id="review-items">
         <thead>
           <tr>
-            <td>Item</td>
-            <td>Calories</td>
-            <td>Fats</td>
-            <td>Carbs</td>
-            <td>Protein</td>
-            <td />
+            <th>Item</th>
+            <th>Calories</th>
+            <th>Fats</th>
+            <th>Carbs</th>
+            <th>Protein</th>
+            <th />
           </tr>
         </thead>
         <tbody>
           {selectItems}
-          <tr>
+          <tr id="macro-total">
             <td>TOTAL: </td>
             <td>{total.nf_calories}</td>
             <td>{total.nf_total_fat}</td>
