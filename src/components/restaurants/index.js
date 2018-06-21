@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Restaurant = props => {
-  // console.log(props);
   let restaurants = props.brands.map((restaurant, i) => {
     return (
       <li

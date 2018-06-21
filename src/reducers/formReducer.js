@@ -25,7 +25,7 @@ const initialState = {
     fields: {
       currentPage: 1,
       itemsPerPage: 8,
-      totalPages: [] //need to use an array if passing value through as a prop into pagination comp
+      totalPages: []
     }
   },
   selectedItems: [],
@@ -38,7 +38,6 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-  // console.log(action,  state);
   switch (action.type) {
     case 'SUBMIT':
       return {
@@ -53,14 +52,12 @@ export default (state = initialState, action) => {
       };
 
     case 'SET_CALS':
-      // console.log(action.payload);
       let calories = {
         fields: {
           cal_min: action.payload.min,
           cal_max: action.payload.max
         }
       };
-      // console.log(calories);
       return {
         ...state,
         calories: calories
@@ -73,7 +70,6 @@ export default (state = initialState, action) => {
       };
 
     case 'GET_ITEMS':
-      // console.log(action.payload);
       return {
         ...state,
         foodItems: action.payload,
@@ -81,15 +77,11 @@ export default (state = initialState, action) => {
       };
 
     case '@@redux-form/CHANGE':
-      // console.log(action.meta.form); //logs what form is being used on input
       let macros = { ...state.macros };
 
       if (action.meta.form !== 'simple') {
-        // console.log(macros, state.macros);
-        // console.log(state);
         macros.fields[action.meta.field] = action.payload;
       }
-      // console.log(action.payload);
 
       return {
         ...state,
@@ -97,8 +89,6 @@ export default (state = initialState, action) => {
       };
 
     case 'APPLY_FILTER':
-      // console.log(state);
-      console.log('filter is logging');
       let filterList = state.initialFoodItems.filter(function(el) {
         return (
           el.fields.nf_protein <=
@@ -109,8 +99,6 @@ export default (state = initialState, action) => {
             (Number(state.macros.fields.nf_total_fat) || 1000000)
         );
       });
-      // console.log(filterList);
-
       return {
         ...state,
         foodItems: filterList
@@ -124,7 +112,6 @@ export default (state = initialState, action) => {
           foodItems: state.foodItems
         }
       };
-      // console.log(prevPage);
       return {
         ...state,
         pagination: prevPage
@@ -144,8 +131,6 @@ export default (state = initialState, action) => {
       };
 
     case 'HANDLE_CLICK':
-      // console.log('HANDLE CLICK CLICKED!', this);
-      // console.log(state, action);
       let selectPage = {
         fields: {
           currentPage: action.payload,
@@ -159,19 +144,12 @@ export default (state = initialState, action) => {
       };
 
     case 'ADD_TOTAL':
-      console.log(state.selectedItems);
-      console.log(action.item);
-      // console.log(totals);
-
-      console.log(state, action);
       NotificationManager.success(
         `${action.item.fields.item_name} added to your list`
       );
       return {
         ...state,
-        selectedItems: [...state.selectedItems, action.item] //removed ', action.item' from array
-        // selectedItems: selectedItems,
-        // totals: totals
+        selectedItems: [...state.selectedItems, action.item]
       };
 
     case 'REMOVE_ITEM':

@@ -1,5 +1,5 @@
 #nav-links td {
-  border-right: 1px solid black;
+  border-right: 1px solid rgb(45, 106, 41);
   line-height: 40px;
   background-color: rgb(131, 163, 65);
   font-size: 16px;
@@ -19,6 +19,14 @@
 #nav-links {
   margin: auto;
   width: 100%;
+}
+
+#homeIcon,
+#aboutIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+  filter: invert(1);
 }
 
 @media only screen and (min-width: 650px) {

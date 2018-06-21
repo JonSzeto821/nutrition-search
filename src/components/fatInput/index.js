@@ -22,5 +22,5 @@ const FatInput = props => {
 };
 
 export default reduxForm({
-  form: 'fats' // a unique identifier for this form
+  form: 'fats'
 })(FatInput);

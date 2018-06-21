@@ -15,7 +15,7 @@ ol.progtrckr li {
 }
 ol.progtrckr li span {
   padding: 0 1rem;
-  color: #f5f5f5;
+  color: rgb(245, 245, 245);
   font-family: Roboto;
 }
 @media (max-width: 650px) {
@@ -26,7 +26,7 @@ ol.progtrckr li span {
 .progtrckr em {
   display: none;
   font-weight: 700;
-  padding-left: 0.5rem;
+  /*padding-left: 0.5rem;*/
 }
 @media (max-width: 650px) {
   .progtrckr em {
@@ -54,7 +54,7 @@ ol.progtrckr li:before {
   position: relative;
   bottom: -1.6rem;
   float: left;
-  left: 50%;
+  left: 34%;
 }
 ol.progtrckr li.progtrckr-todo:before {
   content: '\039F';
@@ -121,6 +121,10 @@ ol.progtrckr li.progtrckr-done:hover:before {
   ol.progtrckr,
   .footer-buttons {
     width: 90%;
+  }
+
+  ol.progtrckr li:before {
+    left: 45%;
   }
 
   .footer-buttons button {

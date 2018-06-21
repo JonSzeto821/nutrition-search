@@ -19,7 +19,7 @@ input#searchbox {
 }
 
 #searchbox {
-  background-color: #fff;
+  background-color: rgb(224, 238, 224);
   margin: 5px;
   width: 95%;
   text-align: center;
@@ -41,7 +41,7 @@ input:focus {
 
 .submit-btn {
   background-color: #2860a1;
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
 }
 
@@ -62,6 +62,8 @@ input:focus {
   .clear-btn,
   .submit-btn {
     margin: 5px;
-    line-height: 20pt;
+    /*line-height: 20pt;*/
+    line-height: 30pt;
+    font-size: 18px;
   }
 }

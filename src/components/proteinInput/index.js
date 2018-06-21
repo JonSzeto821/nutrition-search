@@ -22,5 +22,5 @@ const ProteinInput = props => {
 };
 
 export default reduxForm({
-  form: 'protein' // a unique identifier for this form
+  form: 'protein'
 })(ProteinInput);

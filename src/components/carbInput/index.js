@@ -3,9 +3,6 @@ import { Field, reduxForm } from 'redux-form';
 import '../../styles/step2/macroInputs.css';
 
 const CarbInput = props => {
-  // const { pristine, submitting } = props;
-  // console.log(pristine, submitting);
-
   return (
     <form id="carb-input">
       <div>
@@ -20,19 +17,10 @@ const CarbInput = props => {
           />
         </div>
       </div>
-      <div>
-        {/*        <button
-          type="button"
-          className="clear-btn show"
-          // disabled={pristine || submitting}
-          onClick={reset}>
-          Clear
-        </button>*/}
-      </div>
     </form>
   );
 };
 
 export default reduxForm({
-  form: 'carb' // a unique identifier for this form
+  form: 'carb'
 })(CarbInput);

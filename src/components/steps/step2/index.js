@@ -4,7 +4,6 @@ import Accordion from '../../../components/accordion';
 import Pagination from '../../../components/pagination';
 
 const Step2 = props => {
-  console.log(props);
   return (
     <div id="step2-container">
       <h1>Macro Input</h1>

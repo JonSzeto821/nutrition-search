@@ -3,12 +3,8 @@ import { Field, reduxForm } from 'redux-form';
 import '../../styles/step1/inputForm.css';
 
 const SimpleForm = props => {
-  // console.log(props, props.onSubmit, props.handleSubmit, props.submit);
-  // console.log(props.onSubmit);
-  // console.log(props.handleSubmit);
-  // console.log(props.submit);
   const { handleSubmit, pristine, reset, submitting } = props;
-  // console.log(handleSubmit);
+
   return (
     <form onSubmit={handleSubmit} id="brand-search">
       <div>
@@ -43,5 +39,5 @@ const SimpleForm = props => {
 };
 
 export default reduxForm({
-  form: 'simple' // a unique identifier for this form
+  form: 'simple'
 })(SimpleForm);

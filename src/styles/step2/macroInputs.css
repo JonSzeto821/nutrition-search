@@ -5,7 +5,7 @@
 
 #filter-wrap {
   padding: 10px;
-  background-color: #e0eee0;
+  background-color: rgb(224, 238, 224);
   width: 100%;
   margin: 0 auto;
 }
@@ -16,9 +16,9 @@
 }
 
 #filter-btn {
-  background-color: #2860a1;
+  background-color: rgb(40, 96, 161);
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 10px auto;
   border: none;
   line-height: 44pt;
@@ -37,7 +37,7 @@
 #carb-input input,
 #fat-input input {
   text-align: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 3px;
 }
 
@@ -53,7 +53,7 @@ table#macro-input {
 @media only screen and (min-width: 650px) {
   #filter-btn {
     line-height: 30pt;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   #filter-wrap p {

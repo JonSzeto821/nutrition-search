@@ -8,7 +8,6 @@ const Pagination = props => {
   const currentPage = props.pagination.fields.currentPage;
   const itemsPerPage = props.pagination.fields.itemsPerPage;
 
-  // Logic for displaying current foodItems
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = foodItems.slice(indexOfFirstItem, indexOfLastItem);
@@ -54,7 +53,6 @@ const Pagination = props => {
     );
   });
 
-  // Logic for displaying page numbers, determines how many pages are needed to display all content
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(foodItems.length / itemsPerPage); i++) {
     pageNumbers.push(i);

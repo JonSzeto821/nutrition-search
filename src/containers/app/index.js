@@ -3,6 +3,8 @@ import { Route, Link } from 'react-router-dom';
 import Home from '../home';
 import About from '../about';
 import '../../styles/navLinks.css';
+import homeIcon from '../../styles/home_icon.svg';
+import aboutIcon from '../../styles/about_icon.svg';
 
 const App = () => (
   <div>
@@ -13,12 +15,13 @@ const App = () => (
             <tr>
               <td>
                 <Link className="link" to="/">
-                  Home
+                  <img id="homeIcon" src={homeIcon} alt="Home Icon" />Home
                 </Link>
               </td>
               <td>
                 <Link className="link" to="/about">
-                  About App
+                  <img id="aboutIcon" src={aboutIcon} alt="About Icon" />About
+                  App
                 </Link>
               </td>
               <td>

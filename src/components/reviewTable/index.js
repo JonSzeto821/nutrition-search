@@ -3,7 +3,6 @@ import RemoveIcon from '../../styles/step3/remove_icon.svg';
 import '../../styles/step3/reviewTable.css';
 
 const ReviewTable = props => {
-  console.log(props);
   let total = {
     nf_calories: 0,
     nf_total_fat: 0,
@@ -52,7 +51,7 @@ const ReviewTable = props => {
         <tbody>
           {selectItems}
           <tr id="macro-total">
-            <td>TOTAL: </td>
+            <td className="total">TOTAL</td>
             <td>{total.nf_calories}</td>
             <td>{total.nf_total_fat}</td>
             <td>{total.nf_total_carbohydrate}</td>
