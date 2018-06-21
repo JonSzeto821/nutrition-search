@@ -10,6 +10,10 @@
   color: #f5f5f5;
 }
 
+#review-container {
+  padding-bottom: 10px;
+}
+
 #reset-btn {
   background-color: #2860a1;
   color: #f5f5f5;
@@ -19,11 +23,14 @@
   line-height: 44pt;
   border-radius: 3px;
   border: none;
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 650px) {
   #step3-container {
     width: 90%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
   }
 
   #reset-btn {

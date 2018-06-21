@@ -12,13 +12,19 @@ const App = () => (
           <tbody>
             <tr>
               <td>
-                <Link to="/">Home</Link>
+                <Link className="link" to="/">
+                  Home
+                </Link>
               </td>
               <td>
-                <Link to="/about">About App</Link>
+                <Link className="link" to="/about">
+                  About App
+                </Link>
               </td>
               <td>
-                <Link to="/Nutritionix">Nutritionix</Link>
+                <Link className="link" to="/Nutritionix">
+                  Nutritionix
+                </Link>
               </td>
             </tr>
           </tbody>
@@ -26,17 +32,19 @@ const App = () => (
       </header>
     </div>
 
-    <main>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route
-        exact
-        path="/Nutritionix"
-        component={() =>
-          (window.location = 'https://developer.nutritionix.com/docs/v1_1')
-        }
-      />
-    </main>
+    <div id="content">
+      <main>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route
+          exact
+          path="/Nutritionix"
+          component={() =>
+            (window.location = 'https://developer.nutritionix.com/docs/v1_1')
+          }
+        />
+      </main>
+    </div>
   </div>
 );
 

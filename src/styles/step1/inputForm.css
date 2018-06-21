@@ -32,19 +32,17 @@ input:focus {
   outline: none;
 }
 
-.clear-btn {
+.clear-btn,
+.submit-btn {
   line-height: 44pt;
   border-radius: 3px;
   margin: 5px;
 }
 
 .submit-btn {
-  line-height: 44pt;
   background-color: #2860a1;
   color: white;
-  margin: 5px;
   border: none;
-  border-radius: 3px;
 }
 
 .hidden {
@@ -61,11 +59,7 @@ input:focus {
     font-size: 16px;
   }
 
-  .clear-btn {
-    margin: 5px;
-    line-height: 20pt;
-  }
-
+  .clear-btn,
   .submit-btn {
     margin: 5px;
     line-height: 20pt;

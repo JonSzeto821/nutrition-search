@@ -26,14 +26,16 @@ const Step2 = props => {
       <div id="menu-container">
         <h3 className="menu-items">Menu Items</h3>
         <p>Add menu items to review list.</p>
-        <Pagination
-          prevPage={props.prevPage}
-          nextPage={props.nextPage}
-          handleClick={props.handleClick}
-          pagination={props.pagination}
-          foodItems={props.foodItems}
-          addToTotal={props.addToTotal}
-        />
+        <div className="item-container">
+          <Pagination
+            prevPage={props.prevPage}
+            nextPage={props.nextPage}
+            handleClick={props.handleClick}
+            pagination={props.pagination}
+            foodItems={props.foodItems}
+            addToTotal={props.addToTotal}
+          />
+        </div>
       </div>
     </div>
   );

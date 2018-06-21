@@ -79,8 +79,8 @@ const Home = props => {
       <div className="step-progress">
         <Stepzilla
           stepsNavigation={false}
-          nextButtonText={'>'}
-          backButtonText={'<'}
+          nextButtonText={'⇨'}
+          backButtonText={'⇦'}
           nextButtonCls={'btn'}
           backButtonCls={'btn'}
           steps={steps}

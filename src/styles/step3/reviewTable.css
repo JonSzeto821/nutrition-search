@@ -54,6 +54,7 @@
 }
 #review-items th {
   text-align: left;
+  font-family: Roboto;
 }
 #review-items thead th {
   background-color: rgb(131, 163, 65);

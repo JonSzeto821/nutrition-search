@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   -webkit-padding-start: 0;
-  margin: 0;
+  margin: 0 auto;
   padding-bottom: 10px;
   background-color: #f5f5f5;
 }
@@ -15,4 +15,28 @@
   font-weight: 900;
   cursor: pointer;
   background-color: #f5f5f5;
+  font-size: 35px;
+  width: 20px;
+}
+
+.pag-btn {
+  margin: 5px;
+  line-height: 30pt;
+  border-radius: 3px;
+  background-color: rgb(131, 163, 65);
+  color: #f5f5f5;
+}
+
+@media only screen and (min-width: 650px) {
+  .pag-btn {
+    line-height: 20pt;
+  }
+
+  #page-numbers > li {
+    margin-right: 0.3em;
+
+    font-weight: 900;
+    font-size: 25px;
+    width: 20px;
+  }
 }

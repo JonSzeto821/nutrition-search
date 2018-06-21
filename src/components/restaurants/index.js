@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../styles/step1/restaurants.css';
 
 const Restaurant = props => {
   // console.log(props);

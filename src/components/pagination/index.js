@@ -4,7 +4,6 @@ import '../../styles/step2/pagination.css';
 import '../../styles/step2/menuItems.css';
 
 const Pagination = props => {
-  console.log(props);
   const foodItems = props.foodItems;
   const currentPage = props.pagination.fields.currentPage;
   const itemsPerPage = props.pagination.fields.itemsPerPage;
@@ -45,7 +44,7 @@ const Pagination = props => {
                 <button
                   onClick={() => props.addToTotal(item)}
                   className="add-btn">
-                  <img id="addIcon" src={addIcon} alt="Add Icon" />add
+                  <img id="addIcon" src={addIcon} alt="Add Icon" />ADD
                 </button>
               </td>
             </tr>
@@ -60,11 +59,7 @@ const Pagination = props => {
   for (let i = 1; i <= Math.ceil(foodItems.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
-  // console.log(pageNumbers.length === currentPage || 1);
 
-  // if (currentPage == page.Numbers.length){ end = true; }
-
-  //renders out the page numbers, but needs a way to direct user to specific page on click
   const renderPageNumbers = pageNumbers.map(number => {
     return (
       <li key={number} id={number} onClick={() => props.handleClick(number)}>
@@ -79,14 +74,16 @@ const Pagination = props => {
       <ul id="page-numbers">
         <button
           disabled={currentPage === 1 ? true : false}
-          onClick={props.prevPage}>
-          &#8592; Back
+          onClick={props.prevPage}
+          className="pag-btn">
+          Back
         </button>
         {renderPageNumbers}
         <button
           disabled={currentPage === pageNumbers.length ? true : false}
-          onClick={props.nextPage}>
-          Next &#8594;
+          onClick={props.nextPage}
+          className="pag-btn">
+          Next
         </button>
       </ul>
     </div>

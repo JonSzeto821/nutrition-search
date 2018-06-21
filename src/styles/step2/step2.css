@@ -21,13 +21,15 @@
 }
 
 #menu-btn {
-  background-color: rgb(45, 106, 41);
+  background-color: #2860a1;
   color: #f5f5f5;
   border: none;
   display: block;
   margin: auto;
   line-height: 44pt;
   border-radius: 3px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 #calorie-title {
@@ -48,18 +50,26 @@
     vertical-align: top;
     height: 752px;
     border-right: 1px solid black;
+    border-left: 1px solid black;
   }
 
   #menu-container {
     display: inline-block;
     width: 50%;
     height: 752px;
-    overflow-y: scroll;
+
     margin: 0;
+    border-right: 1px solid black;
   }
 
   #menu-btn {
     margin-bottom: 10px;
     line-height: 30pt;
+    font-size: 16px;
+  }
+
+  .item-container {
+    overflow-y: scroll;
+    height: 648px;
   }
 }

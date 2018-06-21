@@ -1,26 +1,11 @@
-#protein-input label,
-#carb-input label,
-#fat-input label {
-  font-size: 18px;
-  color: rgb(45, 106, 41);
-}
-
-#protein-input input,
-#carb-input input,
-#fat-input input {
-  text-align: center;
-  background-color: white;
-}
-
 .box-size {
   line-height: 40px;
   width: 50%;
 }
 
 #filter-wrap {
-  /*border: 1px solid black;*/
-  padding: 0 10px 10px 10px;
-  background-color: #e0eee0; /*light green*/
+  padding: 10px;
+  background-color: #e0eee0;
   width: 100%;
   margin: 0 auto;
 }
@@ -38,6 +23,22 @@
   border: none;
   line-height: 44pt;
   border-radius: 3px;
+  font-size: 20px;
+}
+
+#protein-input label,
+#carb-input label,
+#fat-input label {
+  font-size: 18px;
+  color: rgb(45, 106, 41);
+}
+
+#protein-input input,
+#carb-input input,
+#fat-input input {
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
 }
 
 #macro-input td {
@@ -52,6 +53,7 @@ table#macro-input {
 @media only screen and (min-width: 650px) {
   #filter-btn {
     line-height: 30pt;
+    font-size: 16px;
   }
 
   #filter-wrap p {

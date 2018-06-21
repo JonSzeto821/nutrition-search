@@ -6,7 +6,7 @@ const ProteinInput = props => {
   return (
     <form id="protein-input">
       <div>
-        <label>Protein</label>
+        <label>Proteins</label>
         <div>
           <Field
             name="nf_protein"

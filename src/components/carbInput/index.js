@@ -9,7 +9,7 @@ const CarbInput = props => {
   return (
     <form id="carb-input">
       <div>
-        <label>Carbohydrate</label>
+        <label>Carbohydrates</label>
         <div>
           <Field
             name="nf_total_carbohydrate"

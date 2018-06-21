@@ -1,23 +1,40 @@
 import React from 'react';
+import '../../styles/about.css';
 
 const About = () => (
-  <div>
+  <div id="about-container">
     <h1>About</h1>
-    <h3>Purpose:</h3>
-    <p>
-      The purpose of the application is to provide users to search nutrition
-      information based on restaurant and calorie range inputs selected by the
-      user.
-    </p>
+    <div className="content-block col left-col divider">
+      <h3>Purpose</h3>
+      <p>
+        Provide users to search nutrition information based on restaurant and
+        calorie range inputs selected by the user.
+      </p>
+    </div>
 
-    <h3>Features:</h3>
-    <ul>
-      <li>Search for a restaurant</li>
-      <li>Define calorie range</li>
-      <li>Filter menu items based on macros (fats, carbs, protein)</li>
-      <li>Add food items to list to review</li>
-      <li>Remove food items from review list</li>
-    </ul>
+    <div className="col">
+      <div className="content-block right-col">
+        <h3>Features</h3>
+        <ol>
+          <li>Search for a restaurant</li>
+          <li>Define calorie range</li>
+          <li>Filter menu items based on macros (fats, carbs, protein)</li>
+          <li>Add food items to list to review</li>
+          <li>Remove food items from review list</li>
+        </ol>
+      </div>
+
+      <div className="content-block right-col">
+        <h3>Technology</h3>
+        <ol>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React.js</li>
+          <li>Nutritionix API</li>
+        </ol>
+      </div>
+    </div>
   </div>
 );
 
