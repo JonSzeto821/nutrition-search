@@ -10,7 +10,9 @@ const Step3 = props => {
         totals={props.totals}
         removeItem={props.removeItem}
       />
-      <button onClick={() => props.jumpToStep(0)} id="reset-btn">
+      <button 
+        onClick={() => props.jumpToStep(0)} 
+        id="reset-btn">
         Search Again
       </button>
       <br />
