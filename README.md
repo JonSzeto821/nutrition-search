@@ -1,22 +1,15 @@
-<p align="center"><a href="https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f"><img src="https://i.imgur.com/PATsTx2.png" title="View tutorial" alt="React, React Router, Redux and Redux Thunk" width="900"></a></p>
+<h1>Nutrition Search</h1>
 
-[![Dependency Status](https://dependencyci.com/github/notrab/create-react-app-redux/badge)](https://dependencyci.com/github/notrab/create-react-app-redux)
+<p>The application was developed for users who track macronutrients. It allows users to search for food items, based on restaurant, and create a running total of nutritional information.</p>
 
-* Tutorial: [Getting started with create-react-app, Redux, React Router & Redux Thunk](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
-* Example: [View on Heroku](https://cra-redux-router-thunk.herokuapp.com/) 🙌
+<h5>Application:</h5> https://mactotal.netlify.com/
 
-## Installation
+<h3>Screenshots</h3>
+<h5>Restaurant Search</h5>
+<img src="public/images/screenshots/nutrition-lookup.png" alt="Restaurant Search" width="300px"/>
 
-```bash
-git clone https://github.com/notrab/create-react-app-redux.git
-cd create-react-app-redux
-yarn
-```
+<h5>Calorie/Macro Range</h5>
+<img src="public/images/screenshots/nutrition-calorie-range.png" alt="Macro Search" width="300px"/>
 
-## Get started
-
-```bash
-yarn start
-```
-
-This boilerplate is built using [create-react-app](https://github.com/facebookincubator/create-react-app) so you will want to read the User Guide for more goodies.
+<h5>Food Item Review</h5>
+<img src="public/images/screenshots/nutrition-review.png" alt="Food Item Review" width="300px"/>
