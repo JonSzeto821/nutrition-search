@@ -40,6 +40,11 @@
   </li>
 </ul>
 
+<h3>Wireframes</h3>
+<div>Step 1: https://wireframe.cc/rHuDyM</div>
+<div>Step 2: https://wireframe.cc/PzdF4g</div>
+<div>Step 3: https://wireframe.cc/6kEHR8</div>
+
 <h3>Technology</h3>
 <ul>
   <li>HTML</li>
