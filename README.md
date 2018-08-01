@@ -11,5 +11,41 @@
 <h5>Calorie/Macro Range</h5>
 <img src="public/images/screenshots/nutrition-calorie-range.png" alt="Macro Search" width="300px"/>
 
-<h5>Food Item Review</h5>
-<img src="public/images/screenshots/nutrition-review.png" alt="Food Item Review" width="300px"/>
+<h5>Review Total</h5>
+<img src="public/images/screenshots/nutrition-review.png" alt="Macro Search" width="300px"/>
+
+<h5>Instructions:</h5>
+<ul>
+  <li>
+    Step 1: Restaurant Search
+    <ul>
+      <li>Enter name of restaurant in search input</li>
+      <li>Click 'Search', select restaurant from results</li>
+    </ul>
+  </li>
+  <li>
+    Step 2: Calorie/Macro Range
+    <ul>
+      <li>Select desired calorie range and click 'Get Menu Items'</li>
+      <li>Optional: define macros and click 'Apply'</li>
+      <li>Optional: define macros and click 'Apply'</li>
+      <li>Click '+ADD' to add food item to review list</li>
+    </ul>
+  </li>
+  <li>
+    Step 3: Review Total
+    <ul>
+      <li>Review selected food items' calorie and macro totals</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Technology</h3>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>React</li>
+  <li>Redux</li>
+  <li>Yarn</li>
+</ul>
