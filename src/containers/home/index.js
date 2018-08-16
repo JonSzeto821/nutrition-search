@@ -82,6 +82,7 @@ const Home = props => {
           backButtonText={'⇦'}
           nextButtonCls={'btn'}
           backButtonCls={'btn'}
+          preventEnterSubmission={true}
           steps={steps}
           props={props}
         />
