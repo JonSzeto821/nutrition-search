@@ -7,9 +7,9 @@ const Step1 = props => {
     <div id="step1-container">
       <div id="step1-head">
         <h1>Nutrition Search</h1>
-        <p>Enter Restaurant name below. </p>
+        <p>Enter Restaurant name or food item below.</p>
         <Form onSubmit={props.submit} />
-        <h3>Select restaurant from list below</h3>
+        {/*<h3>Select restaurant from list below</h3>*/}
       </div>
       <div id="step1-body">
         <Restaurant

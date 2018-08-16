@@ -22,6 +22,7 @@ const SimpleForm = props => {
       <div>
         <button
           type="submit"
+
           className={'submit-btn ' + (pristine ? 'hidden' : 'show')}
           disabled={pristine || submitting}>
           Search

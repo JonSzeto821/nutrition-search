@@ -1,4 +1,7 @@
-import { NotificationManager } from 'react-notifications';
+import {
+  NotificationContainer,
+  NotificationManager
+} from 'react-notifications';
 
 const initialState = {
   foods: [],
@@ -40,6 +43,10 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'SUBMIT':
+      if (action.payload.hits.length === 0) {
+        NotificationManager.warning('No Results Found');
+      }
+
       return {
         ...state,
         brands: action.payload.hits
