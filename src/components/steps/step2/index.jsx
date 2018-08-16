@@ -13,7 +13,7 @@ const Step2 = props => {
           Restaurant:{' '}
           <span className="bold">{props.restaurant.fields.name}</span>
         </p>
-        <p>Adjust slider to desired calorie range.</p>
+        <p>Adjust slider to desired calorie range</p>
         <Slider setCals={props.setCals} calories={props.calories} />
         <br />
         <br />
@@ -24,7 +24,7 @@ const Step2 = props => {
       </div>
       <div id="menu-container">
         <h3 className="menu-items">Menu Items</h3>
-        <p>Add menu items to review list.</p>
+        <p>Add menu items to review list</p>
         <div className="item-container">
           <Pagination
             prevPage={props.prevPage}

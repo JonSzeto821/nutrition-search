@@ -17,6 +17,10 @@
   padding-top: 20px;
 }
 
+#step1-head p {
+  color: rgb(45, 106, 41);
+}
+
 #step1-container h1,
 #step1-container h3,
 #slider-container h3,

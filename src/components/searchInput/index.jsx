@@ -8,7 +8,7 @@ const SimpleForm = props => {
   return (
     <form onSubmit={handleSubmit} id="brand-search">
       <div>
-        <label>Search Restaurant</label>
+        <label>Search restaurant</label>
         <div>
           <Field
             name="restaurant"
