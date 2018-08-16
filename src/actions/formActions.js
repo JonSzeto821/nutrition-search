@@ -16,12 +16,9 @@ export const submit = values => {
       method: 'GET'
     })
       .then(function(response) {
-        console.log(response);
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
-
         dispatch({
           type: 'SUBMIT',
           payload: myJson
@@ -81,16 +78,16 @@ export const getFoodItems = () => (dispatch, getState) => {
   };
 
   Object.keys(data).forEach(key => url.searchParams.append(key, data[key]));
-  console.log(url);
+  // console.log(url);
   return fetch(url, {
     method: 'GET'
   })
     .then(function(response) {
-      console.log(response);
+      // console.log(response);
       return response.json();
     })
     .then(function(myJson) {
-      console.log(myJson);
+      // console.log(myJson);
 
       dispatch({
         type: 'GET_ITEMS',
@@ -101,7 +98,7 @@ export const getFoodItems = () => (dispatch, getState) => {
 
 //apply filter params to food items list
 export const applyFilter = () => {
-  console.log('APPLY FILTER');
+  // console.log('APPLY FILTER');
   return dispatch => {
     dispatch({
       type: 'APPLY_FILTER'

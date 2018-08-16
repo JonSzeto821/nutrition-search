@@ -9,7 +9,7 @@ export const prevPage = value => {
 };
 
 export const nextPage = value => {
-  console.log(value, this);
+  // console.log(value, this);
   return dispatch => {
     dispatch({
       type: 'NEXT_PAGE',
@@ -19,7 +19,7 @@ export const nextPage = value => {
 };
 
 export const handleClick = number => {
-  console.log(number, this);
+  // console.log(number, this);
   return dispatch => {
     dispatch({
       type: 'HANDLE_CLICK',

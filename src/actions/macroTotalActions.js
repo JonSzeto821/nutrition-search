@@ -1,5 +1,5 @@
 export const addToTotal = item => {
-  console.log(item, this);
+  // console.log(item, this);
   return dispatch => {
     dispatch({
       type: 'ADD_TOTAL',
@@ -9,7 +9,7 @@ export const addToTotal = item => {
 };
 
 export const removeItem = key => {
-  console.log(key, this);
+  // console.log(key, this);
   return dispatch => {
     dispatch({
       type: 'REMOVE_ITEM',
