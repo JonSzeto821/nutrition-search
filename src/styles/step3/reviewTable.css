@@ -47,9 +47,10 @@
   margin: 0 15px;
   background-color: rgba(224, 238, 224, 0.9);
 }
+
 #review-items th {
   text-align: left;
-  font-family: Roboto;
+  font-family: var(--font-roboto);
 }
 
 #review-items thead th {
@@ -57,9 +58,11 @@
   color: var(--color-white);
   font-size: 14px;
 }
+
 #review-items tbody tr:hover {
   background-color: rgba(112, 128, 144, 1);
 }
+
 #review-items tbody td {
   position: relative;
 }

@@ -17,7 +17,7 @@ ol.progtrckr li {
 ol.progtrckr li span {
   padding: 0 1rem;
   color: var(--color-white);
-  font-family: Roboto;
+  font-family: var(--font-roboto);
 }
 
 .progtrckr em {
@@ -108,7 +108,7 @@ ol.progtrckr li.progtrckr-done:hover:before {
 }
 
 .btn {
-  background-color: rgb(131, 163, 65);
+  background-color: var(--color-green);
   color: var(--color-white);
   border: none;
   line-height: 44pt;

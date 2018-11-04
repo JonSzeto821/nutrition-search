@@ -8,7 +8,7 @@
 .link {
   text-decoration: none;
   color: var(--color-white);
-  font-family: Roboto;
+  font-family: var(--font-roboto);
 }
 
 #nav-links td:last-of-type {

@@ -9,6 +9,10 @@
   --color-green: rgb(131, 163, 65);
   --color-light-green: rgb(177, 235, 12);
   --color-dark-green: rgb(45, 106, 41);
+
+  /*Fonts*/
+  --font-roboto: 'Roboto', sans-serif;
+  --font-quicksand: 'Quicksand', sans-serif;
 }
 
 html {
@@ -25,7 +29,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: var(--font-quicksand);
   font-size: 1rem;
   line-height: 1.5;
   height: 100vh;
@@ -35,7 +39,7 @@ h1,
 h2,
 h3,
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-roboto);
 }
 
 button:disabled {
