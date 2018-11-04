@@ -16,7 +16,7 @@
 }
 
 #filter-btn {
-  background-color: rgb(40, 96, 161);
+  background-color: var(--color-blue);
   display: block;
   color: rgb(255, 255, 255);
   margin: 10px auto;
@@ -30,14 +30,14 @@
 #carb-input label,
 #fat-input label {
   font-size: 18px;
-  color: rgb(45, 106, 41);
+  color: var(--color-dark-green);
 }
 
 #protein-input input,
 #carb-input input,
 #fat-input input {
   text-align: center;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   border-radius: 3px;
 }
 

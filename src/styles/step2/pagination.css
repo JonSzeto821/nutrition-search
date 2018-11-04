@@ -1,5 +1,5 @@
 #page-numbers {
-  background-color: rgb(245, 245, 245);
+  background-color: var(--color-white);
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -9,8 +9,8 @@
 }
 
 #page-numbers > li {
-  background-color: rgb(245, 245, 245);
-  color: rgb(45, 106, 41);
+  background-color: var(--color-white);
+  color: var(--color-dark-green);
   margin: 0 0.15em;
   font-weight: 900;
   cursor: pointer;
@@ -23,8 +23,8 @@
 }
 
 .pag-btn {
-  background-color: rgb(131, 163, 65);
-  color: rgb(245, 245, 245);
+  background-color: var(--color-green);
+  color: var(--color-white);
   margin: 5px;
   line-height: 30pt;
   border-radius: 3px;

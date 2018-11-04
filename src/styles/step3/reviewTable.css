@@ -11,7 +11,7 @@
 }
 
 #macro-total {
-  border-top: 1px solid black;
+  border-top: 1px solid var(--color-black);
   font-weight: 900;
   font-size: 16px;
 }
@@ -38,7 +38,7 @@
 }
 
 #review-items table {
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
 }
 
 #review-items th,
@@ -51,9 +51,10 @@
   text-align: left;
   font-family: Roboto;
 }
+
 #review-items thead th {
-  background-color: rgb(131, 163, 65);
-  color: rgb(245, 245, 245);
+  background-color: var(--color-green);
+  color: var(--color-white);
   font-size: 14px;
 }
 #review-items tbody tr:hover {
@@ -62,6 +63,7 @@
 #review-items tbody td {
   position: relative;
 }
+
 #review-items tbody td:hover:before {
   content: '';
   position: absolute;

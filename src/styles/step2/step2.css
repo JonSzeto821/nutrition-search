@@ -6,18 +6,18 @@
   display: block;
   margin: 0 auto;
   width: 100%;
-  background-color: rgb(245, 245, 245);
+  background-color: var(--color-white);
 }
 
 #step2-container h1 {
-  background-color: rgb(45, 106, 41);
+  background-color: var(--color-dark-green);
   margin: 0;
-  color: rgb(245, 245, 245);
+  color: var(--color-white);
 }
 
 #menu-btn {
-  background-color: #2860a1;
-  color: rgb(245, 245, 245);
+  background-color: var(--color-blue);
+  color: var(--color-white);
   border: none;
   display: block;
   margin: auto;
@@ -28,14 +28,14 @@
 }
 
 #menu-container p {
-  color: rgb(45, 106, 41);
+  color: var(--color-dark-green);
 }
 
 #calorie-title {
-  background-color: rgb(131, 163, 65);
+  background-color: var(--color-green);
   margin: 0 auto;
   padding: 10px 0;
-  color: rgb(245, 245, 245);
+  color: var(--color-white);
 }
 
 @media only screen and (min-width: 650px) {
@@ -54,8 +54,8 @@
     width: 50%;
     vertical-align: top;
     height: 752px;
-    border-right: 1px solid rgb(45, 106, 41);
-    border-left: 1px solid rgb(45, 106, 41);
+    border-right: 1px solid var(--color-dark-green);
+    border-left: 1px solid var(--color-dark-green);
   }
 
   #menu-container {
@@ -63,7 +63,7 @@
     width: 50%;
     height: 752px;
     margin: 0;
-    border-right: 1px solid rgb(45, 106, 41);
+    border-right: 1px solid var(--color-dark-green);
   }
 
   #menu-btn {
