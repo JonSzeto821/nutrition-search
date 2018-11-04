@@ -17,7 +17,7 @@ const Slider = props => {
         formatLabel={calories => `${calories} cal`}
         value={obj}
         onChange={calories => props.setCals(calories)}
-        step={5}
+        step={10}
       />
     </div>
   );
