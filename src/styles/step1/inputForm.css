@@ -7,14 +7,14 @@
 }
 
 #brand-search label {
-  color: rgb(45, 106, 41);
+  color: var(--color-dark-green);
   text-align: center;
   font-size: 20px;
 }
 
 input#searchbox {
   border-style: none;
-  border: 1px solid black;
+  border: 1px solid var(--color-black);
   outline: none;
 }
 
@@ -40,7 +40,7 @@ input:focus {
 }
 
 .submit-btn {
-  background-color: #2860a1;
+  background-color: var(--color-blue);
   color: rgb(255, 255, 255);
   border: none;
 }
@@ -62,7 +62,6 @@ input:focus {
   .clear-btn,
   .submit-btn {
     margin: 5px;
-    /*line-height: 20pt;*/
     line-height: 30pt;
     font-size: 18px;
   }
