@@ -15,10 +15,8 @@ export const submit = values => {
     fetch(url, {
       method: 'GET'
     })
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(myJson) {
+      .then(response => response.json())
+      .then(myJson => {
         dispatch({
           type: 'SUBMIT',
           payload: myJson
@@ -66,13 +64,14 @@ export const getFoodItems = () => (dispatch, getState) => {
   // console.log(state);
 
   let url = new URL(`https://api.nutritionix.com/v1_1/search/`);
+  let fields =
+    'brand_name,item_name,nf_calories,nf_total_fat,nf_total_carbohydrate,nf_protein,nf_serving_size_qty,nf_serving_size_unit';
   let data = {
     brand_id: state.reducer.restaurant._id,
     results: '0:50',
     cal_min: state.reducer.calories.fields.cal_min,
     cal_max: state.reducer.calories.fields.cal_max,
-    fields:
-      'brand_name,item_name,nf_calories,nf_total_fat,nf_total_carbohydrate,nf_protein,nf_serving_size_qty,nf_serving_size_unit',
+    fields: `${fields}`,
     appId: 'a49ed4c7',
     appKey: '393944159c41c173ad29ff4a1d08ad97'
   };
@@ -82,13 +81,8 @@ export const getFoodItems = () => (dispatch, getState) => {
   return fetch(url, {
     method: 'GET'
   })
-    .then(function(response) {
-      // console.log(response);
-      return response.json();
-    })
-    .then(function(myJson) {
-      // console.log(myJson);
-
+    .then(response => response.json())
+    .then(myJson => {
       dispatch({
         type: 'GET_ITEMS',
         payload: myJson.hits
