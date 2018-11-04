@@ -16,8 +16,8 @@
 }
 
 #about-container h1 {
-  color: white;
-  background-color: rgb(45, 106, 41);
+  color: var(--color-white);
+  background-color: var(--color-dark-green);
 }
 
 .content-block {
@@ -26,10 +26,10 @@
 }
 
 .content-block h3 {
-  background-color: rgb(131, 163, 65);
+  background-color: var(--color-green);
   margin: 0 auto;
   padding: 10px 0;
-  color: #f5f5f5;
+  color: var(--color-white);
 }
 
 .content-block p,
@@ -44,13 +44,13 @@
   }
 
   .content-border {
-    border-left: 1px solid rgb(45, 106, 41);
-    border-right: 1px solid rgb(45, 106, 41);
-    border-bottom: 1px solid rgb(45, 106, 41);
+    border-left: 1px solid var(--color-dark-green);
+    border-right: 1px solid var(--color-dark-green);
+    border-bottom: 1px solid var(--color-dark-green);
   }
 
   .divider {
-    border-right: 1px solid rgb(45, 106, 41);
+    border-right: 1px solid var(--color-dark-green);
   }
 
   .col {
@@ -58,9 +58,5 @@
     height: 444px;
     width: 50%;
     vertical-align: top;
-  }
-
-  .left-col {
-    border-left: 1px solid black;
   }
 }
